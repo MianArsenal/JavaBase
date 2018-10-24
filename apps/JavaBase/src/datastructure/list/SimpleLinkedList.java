@@ -30,6 +30,7 @@ public class SimpleLinkedList<E> {
     } else {
       Node<E> newNode = new Node<>(last, value, null);
       last.next = newNode;
+      last = newNode;
       size++;
     }
     return true;
@@ -118,6 +119,7 @@ public class SimpleLinkedList<E> {
       if (currentNode.value == e) {
         return true;
       }
+      currentNode = currentNode.next;
     }
     return false;
   }
@@ -157,6 +159,7 @@ public class SimpleLinkedList<E> {
       if(currentNode.value == e){
         return i;
       }
+      currentNode = currentNode.prev;
     }
     return -1;
   }
