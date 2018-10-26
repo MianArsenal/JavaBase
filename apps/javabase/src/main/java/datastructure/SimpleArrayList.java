@@ -1,9 +1,8 @@
-package datastructure.list;
+package datastructure;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.function.Consumer;
 
 /**
  * Created by MIHE on 10/17/2018.
@@ -213,8 +212,5 @@ public class SimpleArrayList<E> implements Collection<E> {
       size--;
     }
 
-    @Override
-    public void forEachRemaining(Consumer action) {
-    }
   }
 }

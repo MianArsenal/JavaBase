@@ -1,4 +1,4 @@
-package datastructure.list;
+package datastructure;
 
 /**
  * Created by MIHE on 10/25/2018.

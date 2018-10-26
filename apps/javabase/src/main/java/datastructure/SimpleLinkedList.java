@@ -1,4 +1,4 @@
-package datastructure.list;
+package datastructure;
 
 import java.util.Collection;
 
@@ -178,3 +178,4 @@ public class SimpleLinkedList<E> {
   }
 
 }
+
