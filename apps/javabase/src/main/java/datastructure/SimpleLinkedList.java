@@ -90,7 +90,7 @@ public class SimpleLinkedList<E> {
 
   public E get(int i) {
     if (size == 0 || i < 0 || i > size) {
-      return null;
+      throw new ArrayIndexOutOfBoundsException(i);
     }
     boolean isFirstHalf = size / 2 >= i;
     Node<E> currentNode = isFirstHalf ? first : last;
