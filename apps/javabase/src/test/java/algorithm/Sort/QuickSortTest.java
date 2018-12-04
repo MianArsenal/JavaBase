@@ -7,9 +7,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Created by MIHE on 11/19/2018.
+ * Created by MIHE on 11/26/2018.
  */
-public class InsertionSortTest {
+public class QuickSortTest {
   @Before
   public void setUp() throws Exception {
   }
@@ -20,14 +20,14 @@ public class InsertionSortTest {
 
   @Test
   public void getInstance() throws Exception {
-    assertEquals(MergeSort.getInstance() == MergeSort.getInstance(), true);
+    assertEquals(QuickSort.getInstance() == QuickSort.getInstance(), true);
   }
 
   @Test
   public void sort() throws Exception {
     String[] strings = { "Str4", "Str2", "Str5", "Str4", "Str3" };
     String[] results = { "Str2", "Str3", "Str4", "Str4", "Str5" };
-    InsertionSort.getInstance().sort(strings);
+    QuickSort.getInstance().sort(strings);
     assertArrayEquals(strings, results);
   }
 

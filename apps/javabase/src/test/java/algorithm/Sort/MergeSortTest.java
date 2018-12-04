@@ -7,9 +7,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Created by MIHE on 11/19/2018.
+ * Created by MIHE on 11/21/2018.
  */
-public class InsertionSortTest {
+public class MergeSortTest {
   @Before
   public void setUp() throws Exception {
   }
@@ -27,7 +27,7 @@ public class InsertionSortTest {
   public void sort() throws Exception {
     String[] strings = { "Str4", "Str2", "Str5", "Str4", "Str3" };
     String[] results = { "Str2", "Str3", "Str4", "Str4", "Str5" };
-    InsertionSort.getInstance().sort(strings);
+    MergeSort.getInstance().sort(strings);
     assertArrayEquals(strings, results);
   }
 
