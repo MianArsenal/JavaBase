@@ -43,11 +43,11 @@ public class Transformer implements ClassFileTransformer {
     return null;
   }
 
-  private byte[] modifyMethod(String className, String m1) {
+  private byte[] modifyMethod(String className, String methodName) {
     ClassPool classPool = ClassPool.getDefault();
     try {
       CtClass mainClass = classPool.get(className.replaceAll("/", "."));
-      CtMethod mainMethod = mainClass.getDeclaredMethod(m1);
+      CtMethod mainMethod = mainClass.getDeclaredMethod(methodName);
       if (!mainMethod.isEmpty()) {
         if (className.equals(mainClassName)) {
           calculateRunTime(mainMethod);
