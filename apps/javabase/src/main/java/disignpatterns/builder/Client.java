@@ -1,4 +1,4 @@
-package disignpatterns.buillder;
+package disignpatterns.builder;
 
 /**
  * Created by MIHE on 3/21/2019.
