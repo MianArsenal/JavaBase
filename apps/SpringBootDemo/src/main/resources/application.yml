@@ -1,0 +1,4 @@
+server:
+  port: 8383
+logging:
+  file: SpringBootDemo.log
