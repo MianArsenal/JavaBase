@@ -2,3 +2,6 @@ server:
   port: 8383
 logging:
   file: SpringBootDemo.log
+spring:
+  profiles:
+    include: master

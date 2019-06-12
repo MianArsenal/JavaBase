@@ -14,6 +14,10 @@ public class PropertiesController {
 
     @Value("${server.port}")
     private String port;
+    @Value("${master.name}")
+    private String masterName;
+    @Value("${master.age}")
+    private String masterAge;
     @Autowired
     private CustomConfiguration customConfiguration;
 
@@ -25,6 +29,16 @@ public class PropertiesController {
     @RequestMapping("/master")
     public String getMaster() {
         return "[" + customConfiguration.getName() + ":" + customConfiguration.getAge() + "]";
+    }
+
+    @RequestMapping("/masterName")
+    public String getMasterName() {
+        return this.masterName;
+    }
+
+    @RequestMapping("/masterAge")
+    public String getMasterAge () {
+        return this.masterAge;
     }
 
 }
