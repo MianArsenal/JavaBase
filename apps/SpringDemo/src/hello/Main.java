@@ -3,6 +3,8 @@ package hello;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.Hashtable;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -14,6 +16,7 @@ public class Main {
         //获取bean
         HelloWorld springHelloWorld = (HelloWorld) context.getBean("helloWorld");
         springHelloWorld.sayHello();
+        Hashtable
     }
 
 }
