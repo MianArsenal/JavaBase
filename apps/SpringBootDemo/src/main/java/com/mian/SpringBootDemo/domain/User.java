@@ -7,6 +7,18 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Date;
+/*
+CREATE TABLE user
+        (
+        ID          int(11)     NOT NULL AUTO_INCREMENT,
+        NAME        varchar(20) NOT NULL,
+        AGE         int(11)     NOT NULL,
+        SALARY      int(11)              DEFAULT NULL,
+        CREATE_DATE timestamp   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        PRIMARY KEY (ID)
+        ) ENGINE = InnoDB
+        DEFAULT CHARSET = utf8;
+ */
 
 @Entity
 public class User implements Serializable {
