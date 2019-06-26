@@ -56,4 +56,10 @@ public class UserController {
         return this.userService.insertUser(user);
     }
 
+    @PostMapping("/insert")
+    public User insertUser(@RequestBody User user) {
+        user.setCreateDate(new Date());
+        return this.userService.insertUser(user);
+    }
+
 }
