@@ -1,10 +1,7 @@
 package com.mian.SpringBootDemo.domain;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 /*
@@ -21,6 +18,7 @@ CREATE TABLE user
  */
 
 @Entity
+@Table(name = "USER")
 public class User implements Serializable {
     private static final long serialVersionUID = 4572582924467190065L;
     @Id
