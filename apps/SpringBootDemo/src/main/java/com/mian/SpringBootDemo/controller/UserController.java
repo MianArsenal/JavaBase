@@ -12,7 +12,7 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController {
 
-    public static final String SUCCESS = "SUCCESS";
+    private static final String SUCCESS = "SUCCESS";
     @Autowired
     private UserService userService;
 

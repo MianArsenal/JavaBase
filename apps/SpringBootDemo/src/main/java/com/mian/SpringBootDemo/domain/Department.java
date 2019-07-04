@@ -1,22 +1,24 @@
 package com.mian.SpringBootDemo.domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Table(name = "DEPARTMENT")
-public class Department {
+public class Department implements Serializable {
 
     @Id
     @GeneratedValue
+    @Column(name = "DEPARTMENT_ID")
     private Integer id;
     @Column(nullable = false)
     private String name;
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "ADDRESS_ID")
+    @JoinColumn(name = "ADDRESS_ID", foreignKey = @ForeignKey(name = "DEPARTMENT_ADDRESS_FK"))
     private Address address;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinTable(name = "DEPARTMENT_EMPLOYEE_ASSOCIATION", joinColumns = {@JoinColumn(name = "DEPARTMENT_ID")}, inverseJoinColumns = {@JoinColumn(name = "EMPLOYEE_ID")})
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "EMPLOYEE_ID", foreignKey = @ForeignKey(name = "DEPARTMENT_EMPLOYEE_FK"))
     private List<Employee> employees;
 
     public Integer getId() {

@@ -1,19 +1,18 @@
 package com.mian.SpringBootDemo.domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "ADDRESS")
-public class Address {
+public class Address implements Serializable {
 
     @Id
     @GeneratedValue
+    @Column(name = "ADDRESS_ID")
     private Integer id;
     @Column(nullable = false)
     private String name;
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "DEPARTMENT_ID")
-    private Department department;
 
     public Integer getId() {
         return id;
@@ -30,12 +29,5 @@ public class Address {
     public void setName(String name) {
         this.name = name;
     }
-
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
-    }
+    
 }

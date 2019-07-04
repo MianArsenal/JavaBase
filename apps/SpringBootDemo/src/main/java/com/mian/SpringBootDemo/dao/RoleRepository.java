@@ -1,13 +1,13 @@
 package com.mian.SpringBootDemo.dao;
 
-import com.mian.SpringBootDemo.domain.User;
+import com.mian.SpringBootDemo.domain.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface UserRepository extends JpaRepository<User, Integer> {
+public interface RoleRepository extends JpaRepository<Role, Integer> {
 
-    List<User> findByName(String name);
+    List<Role> findByName(String name);
 
     void deleteByName(String name);
 }

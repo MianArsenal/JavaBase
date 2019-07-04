@@ -1,22 +1,31 @@
 package com.mian.SpringBootDemo.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Table(name = "EMPLOYEE")
-public class Employee {
+public class Employee implements Serializable {
 
     @Id
     @GeneratedValue
+    @Column(name = "EMPLOYEE_ID")
     private Integer id;
     @Column(nullable = false)
     private String name;
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "DEPARTMENT_ID")
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "DEPARTMENT_ID", foreignKey = @ForeignKey(name = "EMPLOYEE_DEPARTMENT_FK"))
+    @JsonIgnore
     private Department department;
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinTable(name = "EMPLOYEE_ROLE_ASSOCIATION", joinColumns = {@JoinColumn(name = "EMPLOYEE_ID")}, inverseJoinColumns = {@JoinColumn(name = "ROLE_ID")})
+    @JoinTable(name = "EMPLOYEE_ROLE_ASSOCIATION",
+            joinColumns = {@JoinColumn(name = "EMPLOYEE_ID")},
+            inverseJoinColumns = {@JoinColumn(name = "ROLE_ID")},
+            foreignKey = @ForeignKey(name = "EMPLOYEE_ROLE_FK"),
+            inverseForeignKey = @ForeignKey(name = "ROLE_EMPLOYEE_FK"))
     private List<Role> roles;
 
     public Integer getId() {
