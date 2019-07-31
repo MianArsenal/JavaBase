@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -16,10 +17,10 @@ public class Employee implements Serializable {
     private Integer id;
     @Column(nullable = false)
     private String name;
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "DEPARTMENT_ID", foreignKey = @ForeignKey(name = "EMPLOYEE_DEPARTMENT_FK"))
-    @JsonIgnore
-    private Department department;
+//    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    @JoinColumn(name = "DEPARTMENT_ID", foreignKey = @ForeignKey(name = "EMPLOYEE_DEPARTMENT_FK"))
+//    @JsonIgnore
+//    private Department department;
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "EMPLOYEE_ROLE_ASSOCIATION",
             joinColumns = {@JoinColumn(name = "EMPLOYEE_ID")},
@@ -27,6 +28,10 @@ public class Employee implements Serializable {
             foreignKey = @ForeignKey(name = "EMPLOYEE_ROLE_FK"),
             inverseForeignKey = @ForeignKey(name = "ROLE_EMPLOYEE_FK"))
     private List<Role> roles;
+
+    public Employee() {
+        roles = new ArrayList<>();
+    }
 
     public Integer getId() {
         return id;
@@ -44,13 +49,13 @@ public class Employee implements Serializable {
         this.name = name;
     }
 
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
-    }
+//    public Department getDepartment() {
+//        return department;
+//    }
+//
+//    public void setDepartment(Department department) {
+//        this.department = department;
+//    }
 
     public List<Role> getRoles() {
         return roles;
@@ -58,5 +63,9 @@ public class Employee implements Serializable {
 
     public void setRoles(List<Role> roles) {
         this.roles = roles;
+    }
+
+    public void addRole(Role role) {
+        this.roles.add(role);
     }
 }

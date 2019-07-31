@@ -2,6 +2,7 @@ package com.mian.SpringBootDemo.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -18,8 +19,14 @@ public class Department implements Serializable {
     @JoinColumn(name = "ADDRESS_ID", foreignKey = @ForeignKey(name = "DEPARTMENT_ADDRESS_FK"))
     private Address address;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "EMPLOYEE_ID", foreignKey = @ForeignKey(name = "DEPARTMENT_EMPLOYEE_FK"))
+    @JoinTable(name = "EMPLOYEE",
+            joinColumns = {@JoinColumn(name = "DEPARTMENT_ID")},
+            inverseJoinColumns = {@JoinColumn(name = "EMPLOYEE_ID")})
     private List<Employee> employees;
+
+    public Department() {
+        employees = new ArrayList<>();
+    }
 
     public Integer getId() {
         return id;
@@ -51,5 +58,9 @@ public class Department implements Serializable {
 
     public void setEmployees(List<Employee> employees) {
         this.employees = employees;
+    }
+
+    public void addEmployee(Employee employee) {
+        this.employees.add(employee);
     }
 }

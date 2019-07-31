@@ -2,6 +2,7 @@ package com.mian.SpringBootDemo.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -21,6 +22,10 @@ public class Role implements Serializable {
             foreignKey = @ForeignKey(name = "ROLE_EMPLOYEE_FK"),
             inverseForeignKey = @ForeignKey(name = "EMPLOYEE_ROLE_FK"))
     private List<Employee> employees;
+
+    public Role() {
+        employees = new ArrayList<>();
+    }
 
     public Integer getId() {
         return id;
@@ -44,5 +49,9 @@ public class Role implements Serializable {
 
     public void setEmployees(List<Employee> employees) {
         this.employees = employees;
+    }
+
+    public void addEmployee (Employee employee) {
+        this.employees.add(employee);
     }
 }
