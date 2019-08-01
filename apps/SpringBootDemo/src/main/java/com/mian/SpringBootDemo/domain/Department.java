@@ -7,24 +7,26 @@ import java.util.List;
 
 @Entity
 @Table(name = "DEPARTMENT")
+@SequenceGenerator(name = "DEPARTMENT_ID_SEQ", sequenceName = "DEPARTMENT_ID_SEQ", allocationSize = 1)
 public class Department implements Serializable {
 
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "DEPARTMENT_ID_SEQ")
     @Id
-    @GeneratedValue
     @Column(name = "DEPARTMENT_ID")
     private Integer id;
     @Column(nullable = false)
     private String name;
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "ADDRESS_ID", foreignKey = @ForeignKey(name = "DEPARTMENT_ADDRESS_FK"))
-    private Address address;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinTable(name = "EMPLOYEE",
-            joinColumns = {@JoinColumn(name = "DEPARTMENT_ID")},
-            inverseJoinColumns = {@JoinColumn(name = "EMPLOYEE_ID")})
+    @OneToMany(mappedBy = "department", cascade = CascadeType.ALL)
     private List<Employee> employees;
+    @OneToOne(mappedBy = "department", cascade = CascadeType.ALL)
+    private Address address;
 
     public Department() {
+        employees = new ArrayList<>();
+    }
+
+    public Department(String name) {
+        this.name = name;
         employees = new ArrayList<>();
     }
 
@@ -44,14 +46,6 @@ public class Department implements Serializable {
         this.name = name;
     }
 
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
     public List<Employee> getEmployees() {
         return employees;
     }
@@ -62,5 +56,13 @@ public class Department implements Serializable {
 
     public void addEmployee(Employee employee) {
         this.employees.add(employee);
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 }

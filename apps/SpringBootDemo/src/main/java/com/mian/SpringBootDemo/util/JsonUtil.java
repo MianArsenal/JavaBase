@@ -12,7 +12,6 @@ public class JsonUtil {
         address.setName("B6");
         Department department = new Department();
         department.setName("Development");
-        department.setAddress(address);
 
         ObjectMapper mapper = new ObjectMapper();
         System.out.println(mapper.writeValueAsString(address));;

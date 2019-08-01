@@ -9,27 +9,29 @@ import java.util.List;
 
 @Entity
 @Table(name = "EMPLOYEE")
+@SequenceGenerator(name = "EMPLOYEE_ID_SEQ", sequenceName = "EMPLOYEE_ID_SEQ", allocationSize = 1)
 public class Employee implements Serializable {
 
+
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "EMPLOYEE_ID_SEQ")
     @Id
-    @GeneratedValue
     @Column(name = "EMPLOYEE_ID")
     private Integer id;
     @Column(nullable = false)
     private String name;
-//    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "DEPARTMENT_ID", foreignKey = @ForeignKey(name = "EMPLOYEE_DEPARTMENT_FK"))
-//    @JsonIgnore
-//    private Department department;
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinTable(name = "EMPLOYEE_ROLE_ASSOCIATION",
-            joinColumns = {@JoinColumn(name = "EMPLOYEE_ID")},
-            inverseJoinColumns = {@JoinColumn(name = "ROLE_ID")},
-            foreignKey = @ForeignKey(name = "EMPLOYEE_ROLE_FK"),
-            inverseForeignKey = @ForeignKey(name = "ROLE_EMPLOYEE_FK"))
+    @ManyToOne
+    @JoinColumn(name = "DEPARTMENT_ID", foreignKey = @ForeignKey(name = "EMPLOYEE_DEPARTMENT_FK"))
+    @JsonIgnore
+    private Department department;
+    @ManyToMany(mappedBy = "employees", cascade = CascadeType.ALL)
     private List<Role> roles;
 
     public Employee() {
+        roles = new ArrayList<>();
+    }
+
+    public Employee(String name) {
+        this.name = name;
         roles = new ArrayList<>();
     }
 
@@ -49,13 +51,13 @@ public class Employee implements Serializable {
         this.name = name;
     }
 
-//    public Department getDepartment() {
-//        return department;
-//    }
-//
-//    public void setDepartment(Department department) {
-//        this.department = department;
-//    }
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
 
     public List<Role> getRoles() {
         return roles;

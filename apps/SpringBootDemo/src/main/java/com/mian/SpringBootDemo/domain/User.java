@@ -19,10 +19,12 @@ CREATE TABLE user
 
 @Entity
 @Table(name = "USER")
+@SequenceGenerator(name = "USER_ID_SEQ", sequenceName = "USER_ID_SEQ", allocationSize = 1)
 public class User implements Serializable {
     private static final long serialVersionUID = 4572582924467190065L;
+
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "USER_ID_SEQ")
     @Id
-    @GeneratedValue
     private Integer id;
     @Column(nullable = false)
     private String name;

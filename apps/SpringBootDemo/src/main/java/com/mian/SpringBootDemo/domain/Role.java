@@ -7,15 +7,16 @@ import java.util.List;
 
 @Entity
 @Table(name = "ROLE")
+@SequenceGenerator(name = "ROLE_ID_SEQ", sequenceName = "ROLE_ID_SEQ", allocationSize = 1)
 public class Role implements Serializable {
 
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ROLE_ID_SEQ")
     @Id
-    @GeneratedValue
     @Column(name = "ROLE_ID")
     private Integer id;
     @Column(nullable = false)
     private String name;
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(name = "EMPLOYEE_ROLE_ASSOCIATION",
             joinColumns = {@JoinColumn(name = "ROLE_ID")},
             inverseJoinColumns = {@JoinColumn(name = "EMPLOYEE_ID")},
@@ -24,6 +25,11 @@ public class Role implements Serializable {
     private List<Employee> employees;
 
     public Role() {
+        employees = new ArrayList<>();
+    }
+
+    public Role(String name) {
+        this.name = name;
         employees = new ArrayList<>();
     }
 
@@ -51,7 +57,7 @@ public class Role implements Serializable {
         this.employees = employees;
     }
 
-    public void addEmployee (Employee employee) {
+    public void addEmployee(Employee employee) {
         this.employees.add(employee);
     }
 }

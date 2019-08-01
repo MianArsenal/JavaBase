@@ -4,6 +4,11 @@ import com.mian.SpringBootDemo.domain.Address;
 import com.mian.SpringBootDemo.domain.Department;
 import com.mian.SpringBootDemo.domain.Employee;
 import com.mian.SpringBootDemo.domain.Role;
+import com.mian.SpringBootDemo.service.AddressService;
+import com.mian.SpringBootDemo.service.DepartmentService;
+import com.mian.SpringBootDemo.service.EmployeeService;
+import com.mian.SpringBootDemo.service.RoleService;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,72 +20,51 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class MixedRepositoryTest {
 
     @Autowired
-    private EmployeeRepository employeeRepository;
+    private DepartmentService departmentService;
     @Autowired
-    private AddressRepository addressRepository;
+    private AddressService addressService;
     @Autowired
-    private DepartmentRepository departmentRepository;
+    private EmployeeService employeeService;
     @Autowired
-    private RoleRepository roleRepository;
+    private RoleService roleService;
 
     @Test
-    public void testAddressAndDepartment() {
-        Address address = new Address();
-        address.setName("南软");
-        Department support = new Department();
-        support.setName("Operation");
-        support.setAddress(address);
-        departmentRepository.save(support);
-    }
+    public void test() {
+        Role manager = new Role("Manager");
+        Role teamLeader = new Role("Team Leader");
+        Role developer = new Role("Developer");
+        Role specialist  = new Role("Specialist");
 
-    @Test
-    public void testEmployeeAndRole () {
-        Address address = new Address();
-        address.setName("南软");
+        Address address = new Address("南软01号");
+        Department operations = new Department("运维");
+        address.setDepartment(operations);
+        operations.setAddress(address);
 
-        Department support = new Department();
-        support.setName("Operation");
-        support.setAddress(address);
-        Department developer = new Department();
-        developer.setName("DEV");
-        developer.setAddress(address);
+        Employee henry = new Employee("Henry");
+        manager.addEmployee(henry);
+        specialist.addEmployee(henry);
+        henry.addRole(manager);
+        henry.addRole(specialist);
+        henry.setDepartment(operations);
+        operations.addEmployee(henry);
 
-        Employee mian01 = new Employee();
-        mian01.setName("MiAn01");
-        Employee mian02 = new Employee();
-        mian02.setName("MiAn02");
-        Employee mian03 = new Employee();
-        mian03.setName("MiAn03");
+        Employee damian = new Employee("Damian");
+        teamLeader.addEmployee(damian);
+        developer.addEmployee(damian);
+        damian.addRole(teamLeader);
+        damian.addRole(developer);
+        damian.setDepartment(operations);
+        operations.addEmployee(damian);
 
-        developer.addEmployee(mian01);
-        developer.addEmployee(mian02);
-        support.addEmployee(mian03);
+        this.departmentService.insertDepartment(operations);
 
-        Role manager = new Role();
-        manager.setName("Manager");
-        Role engineer = new Role();
-        engineer.setName("Engineer");
-        Role teamLeader = new Role();
-        teamLeader.setName("Team Leader");
+        Assert.assertEquals(this.addressService.findAddressByName("南软01号").size(), 1);
+        Assert.assertEquals(this.employeeService.findEmployeeByName("Henry").size(), 1);
+        Assert.assertEquals(this.employeeService.findEmployeeByName("Damian").size(), 1);
+        Assert.assertEquals(this.departmentService.findDepartmentByName("运维").size(), 1);
+        Assert.assertEquals(this.roleService.findRoleByName("Manager").size(), 1);
 
-        mian01.addRole(manager);
-        mian01.addRole(engineer);
-        mian02.addRole(teamLeader);
-        mian02.addRole(engineer);
-        mian03.addRole(manager);
-
-//        manager.addEmployee(mian01);
-//        engineer.addEmployee(mian01);
-//        teamLeader.addEmployee(mian02);
-//        engineer.addEmployee(mian02);
-//        manager.addEmployee(mian03);
-
-//        employeeRepository.save(mian01);
-//        employeeRepository.save(mian02);
-//        employeeRepository.save(mian03);
-
-        this.departmentRepository.save(developer);
-        this.departmentRepository.save(support);
+        this.departmentService.deleteDepartmentByName("运维");
     }
 
 }
