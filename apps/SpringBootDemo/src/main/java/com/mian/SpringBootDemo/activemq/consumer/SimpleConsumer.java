@@ -1,11 +1,7 @@
 package com.mian.SpringBootDemo.activemq.consumer;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.jms.annotation.JmsListener;
-import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
 import org.springframework.stereotype.Component;
-
-import javax.jms.ConnectionFactory;
 
 @Component
 public class SimpleConsumer {
