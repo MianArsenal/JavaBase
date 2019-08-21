@@ -20,4 +20,4 @@ spring:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
   profiles:
-    include: master
+    include: master,memcache
