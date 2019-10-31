@@ -19,8 +19,10 @@ object Ops3 {
       println(a)
     }
     val array1 = new Array[Int](array.length)
-    for (index <- 0 until array1.length) {
+    println(array1.getClass)
+    for (index <- array1.indices) {
       array1(index) = array(index) + 10
+      println(array1(index).getClass)
     }
     println(array1.toBuffer)
 

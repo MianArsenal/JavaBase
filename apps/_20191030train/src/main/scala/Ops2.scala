@@ -13,7 +13,13 @@ object Ops2 {
     val n = if (x < -3) 1 else ()
     println(n)
     println(n.getClass)
-
+    println("Hello \nWorld!")
+    val string =
+      """ A
+        |BBB
+        |CCC
+      """
+    println(string)
 
   }
 
