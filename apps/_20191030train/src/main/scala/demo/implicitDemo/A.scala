@@ -2,7 +2,7 @@ package demo.implicitDemo
 
 class C
 
-class A(c: C) {
+class A() {
 
   def read(): Unit = {
     println("A Read!")
@@ -23,7 +23,7 @@ class B(c: C) {
 }
 
 object AB {
-  implicit def c2A(c: C): A = new A(c)
+  implicit def c2A(c: C): A = new A()
 
   implicit def c2B(c: C): B = new B(c)
 }

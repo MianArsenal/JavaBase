@@ -3,6 +3,7 @@ package hello;
 public class HelloWorld {
 
     private String name;
+    private Party party;
 
     public HelloWorld() {
         System.out.println("default constructor");
@@ -23,5 +24,19 @@ public class HelloWorld {
 
     public void sayHello() {
         System.out.println("Hello " + this.name);
+        sayYes();
+        party.sayNo();
+    }
+
+    public void sayYes() {
+        System.out.println("hello world says yes!!!!!");
+    }
+
+    public Party getParty() {
+        return party;
+    }
+
+    public void setParty(Party party) {
+        this.party = party;
     }
 }
