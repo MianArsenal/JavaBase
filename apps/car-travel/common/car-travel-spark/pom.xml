@@ -13,7 +13,6 @@
     <artifactId>car-travel-spark</artifactId>
 
     <dependencies>
-
         <!--spark 离线任务核心依赖-->
         <dependency>
             <groupId>org.apache.spark</groupId>
@@ -35,6 +34,18 @@
             <version>${spark.version}</version>
         </dependency>
 
-    </dependencies>
 
+        <!--依赖本项目中的module开始-->
+        <dependency>
+            <groupId>car-travel</groupId>
+            <artifactId>car-travel-util</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>slf4j-api</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
 </project>
