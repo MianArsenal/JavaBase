@@ -1,7 +1,6 @@
 package classloader;
 
 import java.io.*;
-import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 public class MyClassLoader extends ClassLoader {
