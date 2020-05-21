@@ -9,6 +9,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
+/*
+*配置文件类，仅在初始化时调用
+*/
+
 @EnableWebSecurity
 class SecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -16,15 +20,18 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests(authorize -> authorize
-                        .antMatchers("/css/**").permitAll()
-                        .antMatchers("/user/**").hasRole("USER")
+                        .antMatchers("/css/**").permitAll() //无需认证的资源
+                        .antMatchers("/user/**").hasRole("USER") //需要认证的资源
                 )
                 .formLogin(formLogin -> formLogin
-                        .loginPage("/login")
-                        .failureUrl("/login-error")
+                        .loginPage("/login") //需要认证却未认证页面重定向的url
+                        .failureUrl("/login-error") //认证失败重定向的url
                 );
     }
 
+    /*
+    *初始化用户权限信息于SecurityContext
+    */
     @Bean
     public UserDetailsService userDetailsService() {
         UserDetails userDetails = User.withDefaultPasswordEncoder()
