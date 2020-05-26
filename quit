@@ -1,0 +1,290 @@
+[33mcommit 5d957313c513bacbace3b5983ae2f1b384877e01[m
+Merge: bc836bb 4561fa8
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Tue May 26 10:56:38 2020 +0800
+
+    Merge remote-tracking branch 'gitee/SubBranch01' into SubBranch01
+
+[33mcommit bc836bb54c5099eb07eaa7b8161e1636e5bad9ec[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Mon May 25 15:22:15 2020 +0800
+
+    move helloSecurity to Spring security folder
+
+[33mcommit 8f75e80ce65462ee0c101744d6e44545135e3b3c[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Thu May 21 13:55:15 2020 +0800
+
+    spring security
+
+[33mcommit 177a05371218fc7255df1eed32284018364987ea[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Fri May 15 11:46:41 2020 +0800
+
+    synchronized test
+
+[33mcommit 46063766f30a385f65bb507d849f03e6d1d4b34f[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Wed May 13 11:22:29 2020 +0800
+
+    add Daemon sample
+
+[33mcommit db289c0be74e3e086c2863e5743ea82a428e9887[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Mon Apr 27 15:02:30 2020 +0800
+
+    add spring security
+
+[33mcommit 895875b5b80cdb0b39d476346e6a17479c72b065[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Wed Apr 1 08:55:58 2020 +0800
+
+    add sample about class loader and reflect
+
+[33mcommit 812138bb2c9f3ce3de921a4ff734b4f7a0b13456[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Tue Mar 31 17:02:52 2020 +0800
+
+    add sample about class loader and reflect
+
+[33mcommit 4561fa83a7154e07985b255d38f9935623c463af[m
+Author: MianArsenal <1259608695@qq.com>
+Date:   Mon Dec 23 23:55:46 2019 +0800
+
+    init car-travel
+
+[33mcommit 9b2e119eb3ce1b5406e424b40ab6b54c2fdfe434[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Tue Dec 17 14:15:54 2019 +0800
+
+    test
+
+[33mcommit 331e1198520d8b943891282a49da89f241113709[m
+Author: MianArsenal <1259608695@qq.com>
+Date:   Tue Dec 17 12:42:08 2019 +0800
+
+    add car-travel project
+
+[33mcommit 4813db3813a0847d99c750ffbacd4cc3f34115f8[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Mon Dec 9 15:34:13 2019 +0800
+
+    max commit
+
+[33mcommit 2ee8e46a1774f8fa70aee85ef16108bb1b963db6[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Wed Nov 6 08:43:15 2019 +0800
+
+    scala train
+
+[33mcommit db4d32272172fb119e52e70b1d0a48622a6529af[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Tue Nov 5 11:17:47 2019 +0800
+
+    scala train
+
+[33mcommit 6995893f277abd3ef93b7fc13973d5d71ac721ea[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Mon Nov 4 17:47:38 2019 +0800
+
+    scala train
+
+[33mcommit 34ef8a09a42c61b517488d4ac8f8f1d9b6a04b9b[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Fri Nov 1 17:01:26 2019 +0800
+
+    scala train
+
+[33mcommit b184dd81eda4fc4eb82515e9516428bb8bc68c57[m
+Author: MianArsenal <1259608695@qq.com>
+Date:   Thu Oct 31 22:12:56 2019 +0800
+
+    scala train
+
+[33mcommit faf6e45b19297ecdf1e1f0754a3230dc521abce3[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Thu Oct 31 17:21:00 2019 +0800
+
+    scala train
+
+[33mcommit 4f54b90a12a889b133ebeab4deb26e9aaf50c7de[m
+Author: MianArsenal <1259608695@qq.com>
+Date:   Thu Oct 31 00:01:48 2019 +0800
+
+    scala training
+
+[33mcommit 3a52611c83e215a16082652a80f924e5b601cf1a[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Wed Oct 9 10:32:29 2019 +0800
+
+    change libs for JAVA agency test
+
+[33mcommit beda3938d625c53dbe32d8d1e7422040661ddff1[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Fri Sep 27 15:16:27 2019 +0800
+
+    static handling of access exceptions
+
+[33mcommit 172e907066b3af6a3f0f694c5eff31a3c94bdd83[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Wed Aug 21 16:33:22 2019 +0800
+
+    add memcache connection and test controller of it
+
+[33mcommit ff35c9b13d59c62b1934a698542e99b8278a980b[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Tue Aug 13 16:18:49 2019 +0800
+
+    optimize import
+
+[33mcommit a1fc589ee0c8567ba4aa8be8c88f006dec758e85[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Tue Aug 13 16:10:57 2019 +0800
+
+    add consumers for active mq of spring demo
+
+[33mcommit 5aa8f6945ad21976758e0a47d39d155ab9b12647[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Tue Aug 13 15:28:32 2019 +0800
+
+    add active mq to spring boot demo
+
+[33mcommit cbd9a863069d146fc6c6443f1db8475c0c8c861b[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Thu Aug 1 13:39:41 2019 +0800
+
+    the final version about hibernate object relationship mapping
+
+[33mcommit 2cce14cbd25e8be48badce9553a6015ab7c1f3d1[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Wed Jul 31 17:41:06 2019 +0800
+
+    change object relationship
+
+[33mcommit e0c954f4bf497c141df9c3345463cbb562bcec7b[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Thu Jul 4 17:22:25 2019 +0800
+
+    add hibernate relationship .
+
+[33mcommit 44b88a03af3f6f1d0b3e47aee68a4d646e81b893[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Mon Jul 1 17:01:16 2019 +0800
+
+    remove OneNote and documents. which were been moved into Evernote
+
+[33mcommit 6c12bbf937f74c2554af9b53d62b2faed61df8e3[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Wed Jun 26 17:37:29 2019 +0800
+
+    add OneToOne/OneToMany/ManyToOne/ManyToMany relationship for hibernate
+
+[33mcommit 1ed967aab3ec6bb959cf0c524fa8d0cf833353fb[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Wed Jun 26 10:13:53 2019 +0800
+
+    add post request
+
+[33mcommit 7564c6587ab1cd2e1e9fe11c2e34fd2c32b133f2[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Tue Jun 25 17:31:11 2019 +0800
+
+    add Transactional for hibernate
+
+[33mcommit d9b7893668efaafad62b39a78fb899b93811a3fd[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Mon Jun 24 17:36:46 2019 +0800
+
+    CRUD
+
+[33mcommit 6a51b649b20079a624a7aa9a0bcc94166dc84caa[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Fri Jun 21 17:34:11 2019 +0800
+
+    add hibernate and mysql
+
+[33mcommit e2d66e652a0bf4d599585b6848fe8c50c39cce89[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Wed Jun 12 09:12:33 2019 +0800
+
+    spring import yml
+
+[33mcommit cfc6ed4a1b4f6be74ae741f48177219c89ca8561[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Tue Jun 11 11:48:32 2019 +0800
+
+    spring boot configuration test
+
+[33mcommit 9ef0a71e7aae5bd1e72e47dd1839b727ddb6d93b[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Mon Jun 10 17:32:16 2019 +0800
+
+    spring demo test
+
+[33mcommit 7916e8341e1bc8feea0c9a0c7e3c778c1b4ff2ee[m
+Author: MianArsenal <1259608695@qq.com>
+Date:   Mon Jun 3 12:23:42 2019 +0800
+
+    add onenote of spring
+
+[33mcommit 0a588dfb2eed0eaa27a6f5cbcf1a9a3878104048[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Thu May 30 16:12:55 2019 +0800
+
+    add SpringBootDemo
+
+[33mcommit b74d4106d92495798acdd71b6464e27a63b5d724[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Tue May 28 10:59:58 2019 +0800
+
+    write some cases of ServletDemo
+
+[33mcommit 0bb2b3a4c06e58563e32535aea2774040f5c88af[m
+Author: MianArsenal <1259608695@qq.com>
+Date:   Fri May 24 00:04:38 2019 +0800
+
+    spring automation
+
+[33mcommit 53a14d91d814cad4c70f4f32145d6d96a1d14049[m
+Author: MianArsenal <1259608695@qq.com>
+Date:   Wed May 22 23:07:07 2019 +0800
+
+    spring automation
+
+[33mcommit 4be636dc3138182432e0c5b0ad2b4e419f9eba69[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Fri May 3 11:26:30 2019 +0800
+
+    add spring demo
+
+[33mcommit dea6a3fbeb8d9699e6f2fc120726383837871c5a[m
+Author: MianArsenal <1259608695@qq.com>
+Date:   Fri May 3 00:01:55 2019 +0800
+
+    add onenote of spring
+
+[33mcommit 4b469b28c68da7845c4024fb0ae4fbdc1a6225f4[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Mon Apr 8 16:44:53 2019 +0800
+
+    add jdbc Test.java
+
+[33mcommit 2a5a0fef569781f78b72c17806392dcd5cfbd330[m
+Author: MianArsenal <1259608695@qq.com>
+Date:   Fri Apr 5 09:38:58 2019 +0800
+
+    add reprocess
+
+[33mcommit 3e1d6f1a2c4952bd90a87877fbae4fea5f5c1ba9[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Fri Mar 29 17:12:13 2019 +0800
+
+    add DynamicProxy pattern
+
+[33mcommit 966407c3a522359a9a9b91c6ad8dcf7353285798[m
+Author: Henry Mi <henry.mi@cargosmart.com>
+Date:   Thu Mar 28 17:19:30 2019 +0800
+
+    add DynamicProxy pattern
+
+[33mcommit 394a3c1dd206db7a746035d3128864358f34
