@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="helloWorld" name="helloWorld" class="hello.HelloWorld">
+        <property name="name" value="Spring"></property>
+        <property name="party" ref="party"></property>
+    </bean>
+
+    <bean id="party" class="hello.Party"></bean>
+
+    <bean name="handler" class="hello.Handle"></bean>
+
+    <aop:config>
+        <aop:pointcut id="myPointCut" expression="execution(public * hello.HelloWorld.say*())"/>
+        <aop:pointcut id="myPointCut1" expression="execution(public * hello.Party.say*())"/>
+        <aop:aspect id="aspect" ref="handler">
+            <aop:before method="sayYes" pointcut-ref="myPointCut"></aop:before>
+            <aop:before method="sayYes" pointcut-ref="myPointCut1"></aop:before>
+        </aop:aspect>
+    </aop:config>
+
+</beans>

@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: libs/javassist-3.24.0-GA.jar
+Main-Class: premain.MyMain
+Premain-Class: premain.Premain

@@ -1,0 +1,26 @@
+server:
+  port: 8383
+logging:
+  file: SpringBootDemo.log
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+  datasource:
+    url: jdbc:mysql://localhost:3306/springdemo
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+  http:
+    encoding:
+      force: true
+  profiles:
+    include: master,memcache
