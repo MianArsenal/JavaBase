@@ -1,5 +1,6 @@
 package com.mian.spring.security.action.helloword.configuration;
 
+import com.mian.spring.security.action.helloword.filter.CaptchaFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -16,6 +17,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -24,8 +26,8 @@ import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-//@EnableWebSecurity
-public class WebSecurityConfigCustomJdbc extends WebSecurityConfigurerAdapter {
+@EnableWebSecurity
+public class WebSecurityConfigCustomCaptcha extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private DataSource dataSource;
@@ -35,12 +37,12 @@ public class WebSecurityConfigCustomJdbc extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/admin/api/**").hasRole("ADMIN")
                 .antMatchers("/user/api/**").hasRole("USER")
-                .antMatchers("/app/api/**").permitAll()
+                .antMatchers("/app/api/**", "/captcha.jpg").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/myLogin.html")
-//                .loginProcessingUrl("/login") 没明白loginProcessingUrl的作用
+                .loginPage("/myLogin.html").permitAll()
+                .loginProcessingUrl("/auth/form").permitAll()
                 .successHandler(new AuthenticationSuccessHandler() {
                     @Override
                     public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
@@ -60,6 +62,7 @@ public class WebSecurityConfigCustomJdbc extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .and()
                 .csrf().disable();
+        http.addFilterBefore(new CaptchaFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 
 }
