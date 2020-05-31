@@ -41,7 +41,7 @@ public class WebSecurityConfigCustomCaptcha extends WebSecurityConfigurerAdapter
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/myLogin.html").permitAll()
+                .loginPage("/myLoginCaptcha.html").permitAll()
                 .loginProcessingUrl("/auth/form").permitAll()
                 .successHandler(new AuthenticationSuccessHandler() {
                     @Override
