@@ -1,6 +1,7 @@
 package com.mian.spring.security.action.helloword.filter;
 
 import com.mian.spring.security.action.helloword.exception.CaptchaException;
+import com.mian.spring.security.action.helloword.handler.CaptchaExceptionHandler;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -18,9 +19,10 @@ public class CaptchaFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
         if ("/auth/form".equals(httpServletRequest.getRequestURI())) {
-            verifyCaptcha(httpServletRequest);
             try {
+                verifyCaptcha(httpServletRequest);
             } catch (CaptchaException e) {
+                new CaptchaExceptionHandler(CaptchaExceptionHandler.EXCEPTION_CODE_CAPTCHA_EXCEPTION).onAuthenticationFailure(httpServletRequest, httpServletResponse, e);
                 return;
             }
         }

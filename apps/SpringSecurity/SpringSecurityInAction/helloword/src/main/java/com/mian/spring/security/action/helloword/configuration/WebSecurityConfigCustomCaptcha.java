@@ -1,6 +1,8 @@
 package com.mian.spring.security.action.helloword.configuration;
 
+import com.mian.spring.security.action.helloword.exception.CaptchaException;
 import com.mian.spring.security.action.helloword.filter.CaptchaFilter;
+import com.mian.spring.security.action.helloword.handler.CaptchaExceptionHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -51,14 +53,7 @@ public class WebSecurityConfigCustomCaptcha extends WebSecurityConfigurerAdapter
                         o.write("{\"error code\":\"0\", \"message\":\"登录成功！\"}");
                     }
                 })
-                .failureHandler(new AuthenticationFailureHandler() {
-                    @Override
-                    public void onAuthenticationFailure(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
-                        httpServletResponse.setContentType("application/json;charset=UTF-8");
-                        PrintWriter o = httpServletResponse.getWriter();
-                        o.write("{\"error code\":\"401\", \"message\":\"登录失败！\"}");
-                    }
-                })
+                .failureHandler(new CaptchaExceptionHandler())
                 .permitAll()
                 .and()
                 .csrf().disable();
