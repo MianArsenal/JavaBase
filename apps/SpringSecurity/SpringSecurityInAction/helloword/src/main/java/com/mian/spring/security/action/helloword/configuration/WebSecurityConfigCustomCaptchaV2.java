@@ -25,7 +25,7 @@ import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@EnableWebSecurity
+//@EnableWebSecurity
 public class WebSecurityConfigCustomCaptchaV2 extends WebSecurityConfigurerAdapter {
 
     @Autowired
@@ -67,7 +67,6 @@ public class WebSecurityConfigCustomCaptchaV2 extends WebSecurityConfigurerAdapt
                 .permitAll()
                 .and()
                 .csrf().disable();
-//        http.addFilterBefore(new CaptchaFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 
 }

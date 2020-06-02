@@ -11,7 +11,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-//@Service
+@Service
 public class CaptchaWebAuthenticationDetailsService implements UserDetailsService {
 
     @Autowired
@@ -23,6 +23,7 @@ public class CaptchaWebAuthenticationDetailsService implements UserDetailsServic
         if (null == myUser) {
             throw new UsernameNotFoundException("不存在此用户");
         }
+//        myUser.setUserName(username);
         //模拟数据库的密码已经加密，V1未指定加密方式，才用的是DelegatingPasswordEncoder，需要加前缀才能区分是哪一种加密方式
         myUser.setPassword("{bcrypt}" + passwordEncoder().encode(myUser.getPassword()));
         myUser.setAuthorities(AuthorityUtils.commaSeparatedStringToAuthorityList(myUser.getRoles()));
@@ -32,12 +33,4 @@ public class CaptchaWebAuthenticationDetailsService implements UserDetailsServic
         return new BCryptPasswordEncoder();
     }
 
-
-//    private List<GrantedAuthority> generateAuthorities(String roles) {
-//        List<GrantedAuthority> authorities = new ArrayList<>();
-//        for (String role: roles.split(";")) {
-//            authorities.add(new SimpleGrantedAuthority(role));
-//        }
-//        return authorities;
-//    }
 }
