@@ -1,5 +1,6 @@
-package com.mian.spring.security.action.helloword.handler;
+package com.mian.spring.security.action.helloword.authentication.handler;
 
+import com.mian.spring.security.action.helloword.exception.CaptchaException;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.security.core.AuthenticationException;
@@ -13,28 +14,21 @@ import java.io.PrintWriter;
 
 public class CaptchaExceptionHandler implements AuthenticationFailureHandler {
 
-    public static final String EXCEPTION_CODE_CAPTCHA_EXCEPTION = "CAPTCHA_EXCEPTION";
     protected final Log logger = LogFactory.getLog(this.getClass());
 
-    private String exceptionCode;
-
     public CaptchaExceptionHandler() {
-    }
-
-    public CaptchaExceptionHandler(String exceptionInfo) {
-        this.exceptionCode = exceptionInfo;
     }
 
     @Override
     public void onAuthenticationFailure(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
         httpServletResponse.setContentType("application/json;charset=UTF-8");
         PrintWriter writer = httpServletResponse.getWriter();
-        if (CaptchaExceptionHandler.EXCEPTION_CODE_CAPTCHA_EXCEPTION.equals(this.exceptionCode)) {
+        if (e instanceof CaptchaException) {
             this.logger.debug("验证码不正确");
-            writer.write("{\"error code\":\"HttpStatus.UNAUTHORIZED.value()\", \"message\":\"验证码不正确！\"}");
+            writer.write("{\"error code\":\"401\", \"message\":\"验证码不正确！\"}");
         } else {
             this.logger.debug("用户名或者密码不正确");
-            writer.write("{\"error code\":\"HttpStatus.UNAUTHORIZED.value()\", \"message\":\"用户名或者密码不正确！\"}");
+            writer.write("{\"error code\":\"401\", \"message\":\"用户名或者密码不正确！\"}");
         }
     }
 }

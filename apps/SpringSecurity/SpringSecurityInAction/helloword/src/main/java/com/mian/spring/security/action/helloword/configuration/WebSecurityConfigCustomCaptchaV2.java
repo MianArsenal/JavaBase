@@ -1,14 +1,22 @@
 package com.mian.spring.security.action.helloword.configuration;
 
-import com.mian.spring.security.action.helloword.filter.CaptchaFilter;
 import com.mian.spring.security.action.helloword.authentication.handler.CaptchaExceptionHandler;
+import com.mian.spring.security.action.helloword.filter.CaptchaFilter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.authentication.AuthenticationDetailsSource;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.authentication.WebAuthenticationDetails;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -17,8 +25,22 @@ import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-//@EnableWebSecurity
-public class WebSecurityConfigCustomCaptcha extends WebSecurityConfigurerAdapter {
+@EnableWebSecurity
+public class WebSecurityConfigCustomCaptchaV2 extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    @Qualifier("captchaWebAuthenticationDetailsSource")
+    private AuthenticationDetailsSource<HttpServletRequest, WebAuthenticationDetails> CaptchaWebAuthenticationDetailsSource;
+
+    @Autowired
+    @Qualifier("captchaAuthenticationProvider")
+    private AuthenticationProvider CaptchaAuthenticationProvider;
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.authenticationProvider(this.CaptchaAuthenticationProvider);
+
+    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -29,6 +51,8 @@ public class WebSecurityConfigCustomCaptcha extends WebSecurityConfigurerAdapter
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
+                //应用detail source包装额外信息到user detail，等到provider调用时获得额外信息进行额外验证
+                .authenticationDetailsSource(this.CaptchaWebAuthenticationDetailsSource)
                 .loginPage("/myLoginCaptcha.html").permitAll()
                 .loginProcessingUrl("/auth/form").permitAll()
                 .successHandler(new AuthenticationSuccessHandler() {
@@ -43,7 +67,7 @@ public class WebSecurityConfigCustomCaptcha extends WebSecurityConfigurerAdapter
                 .permitAll()
                 .and()
                 .csrf().disable();
-        http.addFilterBefore(new CaptchaFilter(), UsernamePasswordAuthenticationFilter.class);
+//        http.addFilterBefore(new CaptchaFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 
 }
