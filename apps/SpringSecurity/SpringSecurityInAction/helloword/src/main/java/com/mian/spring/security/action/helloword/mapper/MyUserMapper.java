@@ -9,6 +9,6 @@ import org.springframework.stereotype.Component;
 public interface MyUserMapper {
 
     @Select("SELECT * FROM myusers WHERE username=#{username}")
-    MyUser findByUserName(@Param("username") String username);
+    MyUser findByUsername(@Param("username") String username);
 
 }

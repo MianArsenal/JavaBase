@@ -28,7 +28,7 @@ insert into myusers(username, password, enable, roles) values ("henry", "hahaha"
 @Data
 public class MyUser implements UserDetails {
     private Long id;
-    private String userName;
+    private String username;
     private String password;
     private String roles;
     private boolean enable;
@@ -39,11 +39,6 @@ public class MyUser implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return this.authorities;
-    }
-
-    @Override
-    public String getUsername() {
-        return null;
     }
 
     @Override

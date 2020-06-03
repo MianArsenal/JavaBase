@@ -19,7 +19,7 @@ public class CaptchaWebAuthenticationDetailsService implements UserDetailsServic
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        MyUser myUser = myUserMapper.findByUserName(username);
+        MyUser myUser = myUserMapper.findByUsername(username);
         if (null == myUser) {
             throw new UsernameNotFoundException("不存在此用户");
         }
