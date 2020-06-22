@@ -19,7 +19,7 @@ create table persistent_logins (
 );
  */
 
-@EnableWebSecurity
+//@EnableWebSecurity
 public class WebSecurityConfigRememberMePersistent extends WebSecurityConfigurerAdapter {
 
     @Autowired
