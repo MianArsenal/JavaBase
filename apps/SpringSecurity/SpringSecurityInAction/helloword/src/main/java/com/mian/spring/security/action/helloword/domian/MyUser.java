@@ -1,13 +1,11 @@
 package com.mian.spring.security.action.helloword.domian;
 
-import lombok.AccessLevel;
-import lombok.Data;
-import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Objects;
 
 /*
 create table myusers(
@@ -25,7 +23,6 @@ insert into myusers(username, password, enable, roles) values ("baba", "hahaha",
 insert into myusers(username, password, enable, roles) values ("henry", "hahaha", 1, "ROLE_USER");
 */
 
-@Data
 public class MyUser implements UserDetails {
     private Long id;
     private String username;
@@ -59,5 +56,61 @@ public class MyUser implements UserDetails {
     @Override
     public boolean isEnabled() {
         return this.enable;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @Override
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getRoles() {
+        return roles;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
+    }
+
+    public boolean isEnable() {
+        return enable;
+    }
+
+    public void setEnable(boolean enable) {
+        this.enable = enable;
+    }
+
+    public void setAuthorities(List<GrantedAuthority> authorities) {
+        this.authorities = authorities;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return o instanceof MyUser && this.username.equals(((MyUser) o).getUsername());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(username);
     }
 }
