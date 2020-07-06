@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Hello World Project" default="info">
+	<target name="info" description="Ant Information">
+		<echo>Hell World - Welcome To Apache Ant!</echo>
+	</target>
+	<target name="sayName" depends="info">
+		<echo>Hell MiAn - Welcome To Apache Ant!</echo>
+	</target>
+	<target name="antProperties">
+		<echo>${ant.file}</echo>
+		<echo>${ant.version}</echo>
+		<echo>${basedir}</echo>
+		<echo>${ant.java.version}</echo>
+		<echo>${ant.project.name}</echo>
+		<echo>${ant.project.default-target}</echo>
+		<echo>${ant.project.invoked-targets}</echo>
+		<echo>${ant.core.lib}</echo>
+		<echo>${ant.home}</echo>
+		<echo>${ant.library.dir}</echo>
+	</target>
+	<target name="systemProperties">
+		<echo>${file.separator}</echo>
+	</target>
+	<property name="MyName" value="Mi An"/>
+	<target name="selfProperties">
+		<echo>${MyName}</echo>
+	</target>
+	<property file="build.properties"/>
+	<target name="fileProperties">
+	  <echo>${sitename}</echo>
+	</target>
+</project>
