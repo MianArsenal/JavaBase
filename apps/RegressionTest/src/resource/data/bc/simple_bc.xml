@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BookingConfirmation xmlns="http://www.coscon.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.coscon.com BC_XML_SCHEMA.xsd">
+  <InterchangeControlHeader>
+    <ControlNumber>CurrentTimeMillis</ControlNumber>
+    <SenderId>DTS</SenderId>
+    <ReceiverId>CARGOSAprT</ReceiverId>
+    <DateTime>MMM dd 2020  5:59PM</DateTime>
+    <ControlVersion>1.0</ControlVersion>
+    <UsageIndicator>T</UsageIndicator>
+    <MessageSessionId>0</MessageSessionId>
+  </InterchangeControlHeader>
+  <Confirmation>
+    <MessageHeader>
+      <TransactionInfo>
+        <BatchNumber>71385</BatchNumber>
+        <RecExtractDate TimeZone="CST">MMM dd 2020  5:57PM</RecExtractDate>
+        <UpdateDate TimeZone="GMT">MMM dd 2020  9:57AM</UpdateDate>
+        <ActionLabel>Confirmed</ActionLabel>
+        <ProposeAction>UPDATE_BKG_SHIPMENT</ProposeAction>
+        <ActionType>U</ActionType>
+        <SenderId>COSCON</SenderId>
+        <ReceiverId>CARGOSAprT</ReceiverId>
+        <MessageID>BCXML</MessageID>
+        <Status>N</Status>
+        <IsCScustomer>1</IsCScustomer>
+        <BookingNumber>CurrentTimeMillis</BookingNumber>
+      </TransactionInfo>
+      <Action>U</Action>
+      <BkgStatus>Confirmed</BkgStatus>
+      <BkgStatusDate TimeZone="CST">Oct 10 2019 10:18AM</BkgStatusDate>
+      <BkgStatusDateGMT TimeZone="GMT">Oct 10 2019  2:18AM</BkgStatusDateGMT>
+      <Sistatus>Not Received</Sistatus>
+      <CntrAggrStatus>Partially Covered</CntrAggrStatus>
+      <AmendmentDate TimeZone="CST">Oct 10 2019 10:18AM</AmendmentDate>
+      <CargoType>General</CargoType>
+      <TrafficMode>
+        <OutBound>FCL</OutBound>
+        <InBound>FCL</InBound>
+      </TrafficMode>
+      <BkStatusDesc>Shipment Confirmed</BkStatusDesc>
+      <BookingOffice>YIK</BookingOffice>
+      <SCAC>PASU</SCAC>
+      <CreationDate TimeZone="CST">Oct 10 2019 10:18AM</CreationDate>
+      <CreationDateGMT TimeZone="GMT">Oct 10 2019  2:18AM</CreationDateGMT>
+      <IsOBcustomsReq>0</IsOBcustomsReq>
+      <SicutoffDate TimeZone=""></SicutoffDate>
+      <TradeCode>ICT</TradeCode>
+      <ContainerPickupCheckcode>1573</ContainerPickupCheckcode>
+      <VGMCutOffDT TimeZone="CST"></VGMCutOffDT>
+      <IsMyReefer>0</IsMyReefer>
+      <ReleaseCloseDate></ReleaseCloseDate>
+    </MessageHeader>
+    <MessageBody>
+      <PartyInfo>
+        <Party>
+          <PartyType>BK</PartyType>
+          <PartyName>Ying Kou Yong Quan Shi Ye You Xian Gong Si</PartyName>
+          <CarrierCustomerCode>1153879000</CarrierCustomerCode>
+          <PartyAddress>
+            <AddressLines>39#Floor 551 Renfu04 Binhai Street</AddressLines>
+            <AddressLines></AddressLines>
+            <AddressLines>Yingkou Liaoning 115000</AddressLines>
+          </PartyAddress>
+          <CityName>Yingkou</CityName>
+          <County>Yingkou</County>
+          <StateProvince>Liaoning</StateProvince>
+          <CountryName>CN</CountryName>
+          <PostalCode>115000</PostalCode>
+        </Party>
+        <Party>
+          <PartyType>SH</PartyType>
+          <PartyName>Ying Kou Yong Quan Shi Ye You Xian Gong Si</PartyName>
+          <CarrierCustomerCode>7527195000</CarrierCustomerCode>
+          <PartyAddress>
+            <AddressLines>39#Floor 551 Renfu04 Binhai Street</AddressLines>
+            <AddressLines></AddressLines>
+            <AddressLines>Yingkou Liaoning 115000</AddressLines>
+          </PartyAddress>
+          <CityName>Yingkou</CityName>
+          <County>Yingkou</County>
+          <StateProvince>Liaoning</StateProvince>
+          <CountryName>CN</CountryName>
+          <PostalCode>115000</PostalCode>
+        </Party>
+        <Party>
+          <PartyType>CN</PartyType>
+          <PartyName>Jiujiang Yuntong Hongyuan Container Transport Company Limited</PartyName>
+          <CarrierCustomerCode>6921423000</CarrierCustomerCode>
+          <PartyAddress>
+            <AddressLines></AddressLines>
+            <AddressLines>No.68 Dazhong Road</AddressLines>
+            <AddressLines>Jiujiang Jiangxi 332000</AddressLines>
+          </PartyAddress>
+          <CityName>Jiujiang</CityName>
+          <County>Jiujiang</County>
+          <StateProvince>Jiangxi</StateProvince>
+          <CountryName>CN</CountryName>
+          <PostalCode>332000</PostalCode>
+        </Party>
+        <Party>
+          <PartyType>FW</PartyType>
+          <PartyName>Ying Kou Yong Quan Shi Ye You Xian Gong Si</PartyName>
+          <CarrierCustomerCode>7527195000</CarrierCustomerCode>
+          <PartyAddress>
+            <AddressLines>39#Floor 551 Renfu04 Binhai Street</AddressLines>
+            <AddressLines></AddressLines>
+            <AddressLines>Yingkou Liaoning 115000</AddressLines>
+          </PartyAddress>
+          <CityName>Yingkou</CityName>
+          <County>Yingkou</County>
+          <StateProvince>Liaoning</StateProvince>
+          <CountryName>CN</CountryName>
+          <PostalCode>115000</PostalCode>
+        </Party>
+        <Party>
+          <PartyType>CC</PartyType>
+          <PartyName>Ying Kou Yong Quan Shi Ye You Xian Gong Si</PartyName>
+          <CarrierCustomerCode>7527195000</CarrierCustomerCode>
+          <PartyAddress>
+            <AddressLines>39#Floor 551 Renfu04 Binhai Street</AddressLines>
+            <AddressLines></AddressLines>
+            <AddressLines>Yingkou Liaoning 115000</AddressLines>
+          </PartyAddress>
+          <CityName>Yingkou</CityName>
+          <County>Yingkou</County>
+          <StateProvince>Liaoning</StateProvince>
+          <CountryName>CN</CountryName>
+          <PostalCode>115000</PostalCode>
+        </Party>
+        <Party>
+          <PartyType>NP</PartyType>
+          <PartyName>Jiujiang Yuntong Hongyuan Container Transport Company Limited</PartyName>
+          <CarrierCustomerCode>6921423000</CarrierCustomerCode>
+          <PartyAddress>
+            <AddressLines></AddressLines>
+            <AddressLines>No.68 Dazhong Road</AddressLines>
+            <AddressLines>Jiujiang Jiangxi 332000</AddressLines>
+          </PartyAddress>
+          <CityName>Jiujiang</CityName>
+          <County>Jiujiang</County>
+          <StateProvince>Jiangxi</StateProvince>
+          <CountryName>CN</CountryName>
+          <PostalCode>332000</PostalCode>
+        </Party>
+      </PartyInfo>
+      <ShipmentDetails>
+        <RouteInfo>
+          <Action>U</Action>
+          <RouteUUID>203568081908496643</RouteUUID>
+          <IsDropAndPull>0</IsDropAndPull>
+          <RoutEventDate>
+            <FullReturnCutoff TimeZone="CST">Oct 15 2019  8:00PM</FullReturnCutoff>
+            <EstArrivalFinalHubGMT></EstArrivalFinalHubGMT>
+          </RoutEventDate>
+          <Haulage>
+            <Outbound>M</Outbound>
+            <Inbound>M</Inbound>
+          </Haulage>
+          <RouteLocation>
+            <LocationDetails>
+              <FacilityCode>YIK01</FacilityCode>
+              <FacilityName>Yinkou COSCO Int'l Ctn Tml Co.,Ltd.</FacilityName>
+              <FunctionCode>ORG</FunctionCode>
+              <LocationName></LocationName>
+              <CityName>Yingkou</CityName>
+              <StateProvince>Liaoning</StateProvince>
+              <County>Yingkou</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>JIU01</FacilityCode>
+              <FacilityName>Sipg Jiujiang Port Container Branch</FacilityName>
+              <FunctionCode>FND</FunctionCode>
+              <LocationName></LocationName>
+              <CityName>Jiujiang</CityName>
+              <StateProvince>Jiangxi</StateProvince>
+              <County>Jiujiang</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>YIK01</FacilityCode>
+              <FacilityName>Yinkou COSCO Int'l Ctn Tml Co.,Ltd.</FacilityName>
+              <FunctionCode>POL</FunctionCode>
+              <LocationName>Yingkou</LocationName>
+              <CityName>Yingkou</CityName>
+              <StateProvince>Liaoning</StateProvince>
+              <County>Yingkou</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>JIU01</FacilityCode>
+              <FacilityName>Sipg Jiujiang Port Container Branch</FacilityName>
+              <FunctionCode>POD</FunctionCode>
+              <LocationName>Jiu jiang</LocationName>
+              <CityName>Jiujiang</CityName>
+              <StateProvince>Jiangxi</StateProvince>
+              <County>Jiujiang</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <DepartureDate Qualifier="0" TimeZone="CST">Oct 15 2019  8:00PM</DepartureDate>
+          </RouteLocation>
+          <RouteVoyage>
+            <VesselVoyageType>O</VesselVoyageType>
+            <VesselVoyageInfo>
+              <VoyageEvent>Loading</VoyageEvent>
+              <ServiceName>IC20</ServiceName>
+              <VoyageNumber>005</VoyageNumber>
+              <VoyageDirection>SOUTH</VoyageDirection>
+              <VesselInfo>
+                <VesselCode>TMY</VesselCode>
+                <VesselName>HONG TAI 222</VesselName>
+              </VesselInfo>
+            </VesselVoyageInfo>
+          </RouteVoyage>
+          <VoyagePorts>
+            <Action>U</Action>
+            <SequenceNumber>1</SequenceNumber>
+            <VesselVoyageType>OUTBOUND</VesselVoyageType>
+            <PolCallNumber>1</PolCallNumber>
+            <PodCallNumber>1</PodCallNumber>
+            <LocationDetails>
+              <FacilityCode>YIK01</FacilityCode>
+              <FacilityName>Yinkou COSCO Int'l Ctn Tml Co.,Ltd.</FacilityName>
+              <FunctionCode>POL</FunctionCode>
+              <LocationName>Yingkou</LocationName>
+              <CityName>Yingkou</CityName>
+              <StateProvince>Liaoning</StateProvince>
+              <County>Yingkou</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>NTG04</FacilityCode>
+              <FacilityName>Nantong Tonghai Port Co.,Ltd</FacilityName>
+              <FunctionCode>POD</FunctionCode>
+              <LocationName>Nantong</LocationName>
+              <CityName>Nantong</CityName>
+              <StateProvince>Jiangsu</StateProvince>
+              <County>Nantong</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <VesselVoyageInfo>
+              <VoyageEvent>Loading</VoyageEvent>
+              <ServiceName>IC20</ServiceName>
+              <VoyageNumber>005</VoyageNumber>
+              <VoyageDirection>SOUTH</VoyageDirection>
+              <VesselInfo>
+                <VesselCode>TMY</VesselCode>
+                <VesselName>HONG TAI 222</VesselName>
+              </VesselInfo>
+              <LoadingExtVoyage>005S</LoadingExtVoyage>
+              <DischargeExtVoyage>005S</DischargeExtVoyage>
+            </VesselVoyageInfo>
+            <VesselVoyageInfo>
+              <VoyageEvent>Discharging</VoyageEvent>
+              <ServiceName>IC20</ServiceName>
+              <VoyageNumber>005</VoyageNumber>
+              <VoyageDirection>SOUTH</VoyageDirection>
+              <VesselInfo>
+                <VesselCode>TMY</VesselCode>
+                <VesselName>HONG TAI 222</VesselName>
+              </VesselInfo>
+              <LoadingExtVoyage>006N</LoadingExtVoyage>
+              <DischargeExtVoyage>005S</DischargeExtVoyage>
+            </VesselVoyageInfo>
+            <VoyageEventDate>
+              <Departure Qualifier="0" TimeZone="CST">Oct 15 2019  8:00PM</Departure>
+              <DepartureGMT Qualifier="0" TimeZone="GMT">Oct 15 2019 12:00PM</DepartureGMT>
+              <Arrival Qualifier="0" TimeZone="CST">Oct 18 2019 10:00PM</Arrival>
+              <ArrivalGMT Qualifier="0" TimeZone="GMT">Oct 18 2019  2:00PM</ArrivalGMT>
+            </VoyageEventDate>
+          </VoyagePorts>
+          <VoyagePorts>
+            <Action>U</Action>
+            <SequenceNumber>2</SequenceNumber>
+            <VesselVoyageType>INBOUND</VesselVoyageType>
+            <LocationDetails>
+              <FacilityCode>NTG04</FacilityCode>
+              <FacilityName>Nantong Tonghai Port Co.,Ltd</FacilityName>
+              <FunctionCode>POL</FunctionCode>
+              <LocationName>Nantong</LocationName>
+              <CityName>Nantong</CityName>
+              <StateProvince>Jiangsu</StateProvince>
+              <County>Nantong</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>JIU01</FacilityCode>
+              <FacilityName>Sipg Jiujiang Port Container Branch</FacilityName>
+              <FunctionCode>POD</FunctionCode>
+              <LocationName>Jiu jiang</LocationName>
+              <CityName>Jiujiang</CityName>
+              <StateProvince>Jiangxi</StateProvince>
+              <County>Jiujiang</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <VoyageEventDate>
+              <Departure Qualifier="0"></Departure>
+              <Arrival Qualifier="0"></Arrival>
+            </VoyageEventDate>
+          </VoyagePorts>
+          <IsBETD>N</IsBETD>
+        </RouteInfo>
+        <RouteInfo>
+          <Action>U</Action>
+          <RouteUUID>203568081908496638</RouteUUID>
+          <IsDropAndPull>0</IsDropAndPull>
+          <RoutEventDate>
+            <FullReturnCutoff TimeZone="CST">Oct 15 2019  8:00PM</FullReturnCutoff>
+            <EstArrivalFinalHubGMT></EstArrivalFinalHubGMT>
+          </RoutEventDate>
+          <Haulage>
+            <Outbound>M</Outbound>
+            <Inbound>M</Inbound>
+          </Haulage>
+          <RouteLocation>
+            <LocationDetails>
+              <FacilityCode>YIK01</FacilityCode>
+              <FacilityName>Yinkou COSCO Int'l Ctn Tml Co.,Ltd.</FacilityName>
+              <FunctionCode>ORG</FunctionCode>
+              <LocationName></LocationName>
+              <CityName>Yingkou</CityName>
+              <StateProvince>Liaoning</StateProvince>
+              <County>Yingkou</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>JIU01</FacilityCode>
+              <FacilityName>Sipg Jiujiang Port Container Branch</FacilityName>
+              <FunctionCode>FND</FunctionCode>
+              <LocationName></LocationName>
+              <CityName>Jiujiang</CityName>
+              <StateProvince>Jiangxi</StateProvince>
+              <County>Jiujiang</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>YIK01</FacilityCode>
+              <FacilityName>Yinkou COSCO Int'l Ctn Tml Co.,Ltd.</FacilityName>
+              <FunctionCode>POL</FunctionCode>
+              <LocationName>Yingkou</LocationName>
+              <CityName>Yingkou</CityName>
+              <StateProvince>Liaoning</StateProvince>
+              <County>Yingkou</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>JIU01</FacilityCode>
+              <FacilityName>Sipg Jiujiang Port Container Branch</FacilityName>
+              <FunctionCode>POD</FunctionCode>
+              <LocationName>Jiu jiang</LocationName>
+              <CityName>Jiujiang</CityName>
+              <StateProvince>Jiangxi</StateProvince>
+              <County>Jiujiang</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <DepartureDate Qualifier="0" TimeZone="CST">Oct 15 2019  8:00PM</DepartureDate>
+          </RouteLocation>
+          <RouteVoyage>
+            <VesselVoyageType>O</VesselVoyageType>
+            <VesselVoyageInfo>
+              <VoyageEvent>Loading</VoyageEvent>
+              <ServiceName>IC20</ServiceName>
+              <VoyageNumber>005</VoyageNumber>
+              <VoyageDirection>SOUTH</VoyageDirection>
+              <VesselInfo>
+                <VesselCode>TMY</VesselCode>
+                <VesselName>HONG TAI 222</VesselName>
+              </VesselInfo>
+            </VesselVoyageInfo>
+          </RouteVoyage>
+          <VoyagePorts>
+            <Action>U</Action>
+            <SequenceNumber>2</SequenceNumber>
+            <VesselVoyageType>INBOUND</VesselVoyageType>
+            <LocationDetails>
+              <FacilityCode>NTG04</FacilityCode>
+              <FacilityName>Nantong Tonghai Port Co.,Ltd</FacilityName>
+              <FunctionCode>POL</FunctionCode>
+              <LocationName>Nantong</LocationName>
+              <CityName>Nantong</CityName>
+              <StateProvince>Jiangsu</StateProvince>
+              <County>Nantong</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>JIU01</FacilityCode>
+              <FacilityName>Sipg Jiujiang Port Container Branch</FacilityName>
+              <FunctionCode>POD</FunctionCode>
+              <LocationName>Jiu jiang</LocationName>
+              <CityName>Jiujiang</CityName>
+              <StateProvince>Jiangxi</StateProvince>
+              <County>Jiujiang</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <VoyageEventDate>
+              <Departure Qualifier="0"></Departure>
+              <Arrival Qualifier="0"></Arrival>
+            </VoyageEventDate>
+          </VoyagePorts>
+          <VoyagePorts>
+            <Action>U</Action>
+            <SequenceNumber>1</SequenceNumber>
+            <VesselVoyageType>OUTBOUND</VesselVoyageType>
+            <PolCallNumber>1</PolCallNumber>
+            <PodCallNumber>1</PodCallNumber>
+            <LocationDetails>
+              <FacilityCode>YIK01</FacilityCode>
+              <FacilityName>Yinkou COSCO Int'l Ctn Tml Co.,Ltd.</FacilityName>
+              <FunctionCode>POL</FunctionCode>
+              <LocationName>Yingkou</LocationName>
+              <CityName>Yingkou</CityName>
+              <StateProvince>Liaoning</StateProvince>
+              <County>Yingkou</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>NTG04</FacilityCode>
+              <FacilityName>Nantong Tonghai Port Co.,Ltd</FacilityName>
+              <FunctionCode>POD</FunctionCode>
+              <LocationName>Nantong</LocationName>
+              <CityName>Nantong</CityName>
+              <StateProvince>Jiangsu</StateProvince>
+              <County>Nantong</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <VesselVoyageInfo>
+              <VoyageEvent>Loading</VoyageEvent>
+              <ServiceName>IC20</ServiceName>
+              <VoyageNumber>005</VoyageNumber>
+              <VoyageDirection>SOUTH</VoyageDirection>
+              <VesselInfo>
+                <VesselCode>TMY</VesselCode>
+                <VesselName>HONG TAI 222</VesselName>
+              </VesselInfo>
+              <LoadingExtVoyage>005S</LoadingExtVoyage>
+              <DischargeExtVoyage>005S</DischargeExtVoyage>
+            </VesselVoyageInfo>
+            <VesselVoyageInfo>
+              <VoyageEvent>Discharging</VoyageEvent>
+              <ServiceName>IC20</ServiceName>
+              <VoyageNumber>005</VoyageNumber>
+              <VoyageDirection>SOUTH</VoyageDirection>
+              <VesselInfo>
+                <VesselCode>TMY</VesselCode>
+                <VesselName>HONG TAI 222</VesselName>
+              </VesselInfo>
+              <LoadingExtVoyage>006N</LoadingExtVoyage>
+              <DischargeExtVoyage>005S</DischargeExtVoyage>
+            </VesselVoyageInfo>
+            <VoyageEventDate>
+              <Departure Qualifier="0" TimeZone="CST">Oct 15 2019  8:00PM</Departure>
+              <DepartureGMT Qualifier="0" TimeZone="GMT">Oct 15 2019 12:00PM</DepartureGMT>
+              <Arrival Qualifier="0" TimeZone="CST">Oct 18 2019 10:00PM</Arrival>
+              <ArrivalGMT Qualifier="0" TimeZone="GMT">Oct 18 2019  2:00PM</ArrivalGMT>
+            </VoyageEventDate>
+          </VoyagePorts>
+          <IsBETD>N</IsBETD>
+        </RouteInfo>
+        <RouteInfo>
+          <Action>U</Action>
+          <RouteUUID>203568081908496639</RouteUUID>
+          <IsDropAndPull>0</IsDropAndPull>
+          <RoutEventDate>
+            <FullReturnCutoff TimeZone="CST">Oct 15 2019  8:00PM</FullReturnCutoff>
+            <EstArrivalFinalHubGMT></EstArrivalFinalHubGMT>
+          </RoutEventDate>
+          <Haulage>
+            <Outbound>M</Outbound>
+            <Inbound>M</Inbound>
+          </Haulage>
+          <RouteLocation>
+            <LocationDetails>
+              <FacilityCode>YIK01</FacilityCode>
+              <FacilityName>Yinkou COSCO Int'l Ctn Tml Co.,Ltd.</FacilityName>
+              <FunctionCode>ORG</FunctionCode>
+              <LocationName></LocationName>
+              <CityName>Yingkou</CityName>
+              <StateProvince>Liaoning</StateProvince>
+              <County>Yingkou</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>JIU01</FacilityCode>
+              <FacilityName>Sipg Jiujiang Port Container Branch</FacilityName>
+              <FunctionCode>FND</FunctionCode>
+              <LocationName></LocationName>
+              <CityName>Jiujiang</CityName>
+              <StateProvince>Jiangxi</StateProvince>
+              <County>Jiujiang</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>YIK01</FacilityCode>
+              <FacilityName>Yinkou COSCO Int'l Ctn Tml Co.,Ltd.</FacilityName>
+              <FunctionCode>POL</FunctionCode>
+              <LocationName>Yingkou</LocationName>
+              <CityName>Yingkou</CityName>
+              <StateProvince>Liaoning</StateProvince>
+              <County>Yingkou</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>JIU01</FacilityCode>
+              <FacilityName>Sipg Jiujiang Port Container Branch</FacilityName>
+              <FunctionCode>POD</FunctionCode>
+              <LocationName>Jiu jiang</LocationName>
+              <CityName>Jiujiang</CityName>
+              <StateProvince>Jiangxi</StateProvince>
+              <County>Jiujiang</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <DepartureDate Qualifier="0" TimeZone="CST">Oct 15 2019  8:00PM</DepartureDate>
+          </RouteLocation>
+          <RouteVoyage>
+            <VesselVoyageType>O</VesselVoyageType>
+            <VesselVoyageInfo>
+              <VoyageEvent>Loading</VoyageEvent>
+              <ServiceName>IC20</ServiceName>
+              <VoyageNumber>005</VoyageNumber>
+              <VoyageDirection>SOUTH</VoyageDirection>
+              <VesselInfo>
+                <VesselCode>TMY</VesselCode>
+                <VesselName>HONG TAI 222</VesselName>
+              </VesselInfo>
+            </VesselVoyageInfo>
+          </RouteVoyage>
+          <VoyagePorts>
+            <Action>U</Action>
+            <SequenceNumber>2</SequenceNumber>
+            <VesselVoyageType>INBOUND</VesselVoyageType>
+            <LocationDetails>
+              <FacilityCode>NTG04</FacilityCode>
+              <FacilityName>Nantong Tonghai Port Co.,Ltd</FacilityName>
+              <FunctionCode>POL</FunctionCode>
+              <LocationName>Nantong</LocationName>
+              <CityName>Nantong</CityName>
+              <StateProvince>Jiangsu</StateProvince>
+              <County>Nantong</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>JIU01</FacilityCode>
+              <FacilityName>Sipg Jiujiang Port Container Branch</FacilityName>
+              <FunctionCode>POD</FunctionCode>
+              <LocationName>Jiu jiang</LocationName>
+              <CityName>Jiujiang</CityName>
+              <StateProvince>Jiangxi</StateProvince>
+              <County>Jiujiang</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <VoyageEventDate>
+              <Departure Qualifier="0"></Departure>
+              <Arrival Qualifier="0"></Arrival>
+            </VoyageEventDate>
+          </VoyagePorts>
+          <VoyagePorts>
+            <Action>U</Action>
+            <SequenceNumber>1</SequenceNumber>
+            <VesselVoyageType>OUTBOUND</VesselVoyageType>
+            <PolCallNumber>1</PolCallNumber>
+            <PodCallNumber>1</PodCallNumber>
+            <LocationDetails>
+              <FacilityCode>YIK01</FacilityCode>
+              <FacilityName>Yinkou COSCO Int'l Ctn Tml Co.,Ltd.</FacilityName>
+              <FunctionCode>POL</FunctionCode>
+              <LocationName>Yingkou</LocationName>
+              <CityName>Yingkou</CityName>
+              <StateProvince>Liaoning</StateProvince>
+              <County>Yingkou</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>NTG04</FacilityCode>
+              <FacilityName>Nantong Tonghai Port Co.,Ltd</FacilityName>
+              <FunctionCode>POD</FunctionCode>
+              <LocationName>Nantong</LocationName>
+              <CityName>Nantong</CityName>
+              <StateProvince>Jiangsu</StateProvince>
+              <County>Nantong</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <VesselVoyageInfo>
+              <VoyageEvent>Loading</VoyageEvent>
+              <ServiceName>IC20</ServiceName>
+              <VoyageNumber>005</VoyageNumber>
+              <VoyageDirection>SOUTH</VoyageDirection>
+              <VesselInfo>
+                <VesselCode>TMY</VesselCode>
+                <VesselName>HONG TAI 222</VesselName>
+              </VesselInfo>
+              <LoadingExtVoyage>005S</LoadingExtVoyage>
+              <DischargeExtVoyage>005S</DischargeExtVoyage>
+            </VesselVoyageInfo>
+            <VesselVoyageInfo>
+              <VoyageEvent>Discharging</VoyageEvent>
+              <ServiceName>IC20</ServiceName>
+              <VoyageNumber>005</VoyageNumber>
+              <VoyageDirection>SOUTH</VoyageDirection>
+              <VesselInfo>
+                <VesselCode>TMY</VesselCode>
+                <VesselName>HONG TAI 222</VesselName>
+              </VesselInfo>
+              <LoadingExtVoyage>006N</LoadingExtVoyage>
+              <DischargeExtVoyage>005S</DischargeExtVoyage>
+            </VesselVoyageInfo>
+            <VoyageEventDate>
+              <Departure Qualifier="0" TimeZone="CST">Oct 15 2019  8:00PM</Departure>
+              <DepartureGMT Qualifier="0" TimeZone="GMT">Oct 15 2019 12:00PM</DepartureGMT>
+              <Arrival Qualifier="0" TimeZone="CST">Oct 18 2019 10:00PM</Arrival>
+              <ArrivalGMT Qualifier="0" TimeZone="GMT">Oct 18 2019  2:00PM</ArrivalGMT>
+            </VoyageEventDate>
+          </VoyagePorts>
+          <IsBETD>N</IsBETD>
+        </RouteInfo>
+        <RouteInfo>
+          <Action>U</Action>
+          <RouteUUID>203568081908496640</RouteUUID>
+          <IsDropAndPull>0</IsDropAndPull>
+          <RoutEventDate>
+            <FullReturnCutoff TimeZone="CST">Oct 15 2019  8:00PM</FullReturnCutoff>
+            <EstArrivalFinalHubGMT></EstArrivalFinalHubGMT>
+          </RoutEventDate>
+          <Haulage>
+            <Outbound>M</Outbound>
+            <Inbound>M</Inbound>
+          </Haulage>
+          <RouteLocation>
+            <LocationDetails>
+              <FacilityCode>YIK01</FacilityCode>
+              <FacilityName>Yinkou COSCO Int'l Ctn Tml Co.,Ltd.</FacilityName>
+              <FunctionCode>ORG</FunctionCode>
+              <LocationName></LocationName>
+              <CityName>Yingkou</CityName>
+              <StateProvince>Liaoning</StateProvince>
+              <County>Yingkou</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>JIU01</FacilityCode>
+              <FacilityName>Sipg Jiujiang Port Container Branch</FacilityName>
+              <FunctionCode>FND</FunctionCode>
+              <LocationName></LocationName>
+              <CityName>Jiujiang</CityName>
+              <StateProvince>Jiangxi</StateProvince>
+              <County>Jiujiang</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>YIK01</FacilityCode>
+              <FacilityName>Yinkou COSCO Int'l Ctn Tml Co.,Ltd.</FacilityName>
+              <FunctionCode>POL</FunctionCode>
+              <LocationName>Yingkou</LocationName>
+              <CityName>Yingkou</CityName>
+              <StateProvince>Liaoning</StateProvince>
+              <County>Yingkou</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>JIU01</FacilityCode>
+              <FacilityName>Sipg Jiujiang Port Container Branch</FacilityName>
+              <FunctionCode>POD</FunctionCode>
+              <LocationName>Jiu jiang</LocationName>
+              <CityName>Jiujiang</CityName>
+              <StateProvince>Jiangxi</StateProvince>
+              <County>Jiujiang</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <DepartureDate Qualifier="0" TimeZone="CST">Oct 15 2019  8:00PM</DepartureDate>
+          </RouteLocation>
+          <RouteVoyage>
+            <VesselVoyageType>O</VesselVoyageType>
+            <VesselVoyageInfo>
+              <VoyageEvent>Loading</VoyageEvent>
+              <ServiceName>IC20</ServiceName>
+              <VoyageNumber>005</VoyageNumber>
+              <VoyageDirection>SOUTH</VoyageDirection>
+              <VesselInfo>
+                <VesselCode>TMY</VesselCode>
+                <VesselName>HONG TAI 222</VesselName>
+              </VesselInfo>
+            </VesselVoyageInfo>
+          </RouteVoyage>
+          <VoyagePorts>
+            <Action>U</Action>
+            <SequenceNumber>1</SequenceNumber>
+            <VesselVoyageType>OUTBOUND</VesselVoyageType>
+            <PolCallNumber>1</PolCallNumber>
+            <PodCallNumber>1</PodCallNumber>
+            <LocationDetails>
+              <FacilityCode>YIK01</FacilityCode>
+              <FacilityName>Yinkou COSCO Int'l Ctn Tml Co.,Ltd.</FacilityName>
+              <FunctionCode>POL</FunctionCode>
+              <LocationName>Yingkou</LocationName>
+              <CityName>Yingkou</CityName>
+              <StateProvince>Liaoning</StateProvince>
+              <County>Yingkou</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>NTG04</FacilityCode>
+              <FacilityName>Nantong Tonghai Port Co.,Ltd</FacilityName>
+              <FunctionCode>POD</FunctionCode>
+              <LocationName>Nantong</LocationName>
+              <CityName>Nantong</CityName>
+              <StateProvince>Jiangsu</StateProvince>
+              <County>Nantong</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <VesselVoyageInfo>
+              <VoyageEvent>Loading</VoyageEvent>
+              <ServiceName>IC20</ServiceName>
+              <VoyageNumber>005</VoyageNumber>
+              <VoyageDirection>SOUTH</VoyageDirection>
+              <VesselInfo>
+                <VesselCode>TMY</VesselCode>
+                <VesselName>HONG TAI 222</VesselName>
+              </VesselInfo>
+              <LoadingExtVoyage>005S</LoadingExtVoyage>
+              <DischargeExtVoyage>005S</DischargeExtVoyage>
+            </VesselVoyageInfo>
+            <VesselVoyageInfo>
+              <VoyageEvent>Discharging</VoyageEvent>
+              <ServiceName>IC20</ServiceName>
+              <VoyageNumber>005</VoyageNumber>
+              <VoyageDirection>SOUTH</VoyageDirection>
+              <VesselInfo>
+                <VesselCode>TMY</VesselCode>
+                <VesselName>HONG TAI 222</VesselName>
+              </VesselInfo>
+              <LoadingExtVoyage>006N</LoadingExtVoyage>
+              <DischargeExtVoyage>005S</DischargeExtVoyage>
+            </VesselVoyageInfo>
+            <VoyageEventDate>
+              <Departure Qualifier="0" TimeZone="CST">Oct 15 2019  8:00PM</Departure>
+              <DepartureGMT Qualifier="0" TimeZone="GMT">Oct 15 2019 12:00PM</DepartureGMT>
+              <Arrival Qualifier="0" TimeZone="CST">Oct 18 2019 10:00PM</Arrival>
+              <ArrivalGMT Qualifier="0" TimeZone="GMT">Oct 18 2019  2:00PM</ArrivalGMT>
+            </VoyageEventDate>
+          </VoyagePorts>
+          <VoyagePorts>
+            <Action>U</Action>
+            <SequenceNumber>2</SequenceNumber>
+            <VesselVoyageType>INBOUND</VesselVoyageType>
+            <LocationDetails>
+              <FacilityCode>NTG04</FacilityCode>
+              <FacilityName>Nantong Tonghai Port Co.,Ltd</FacilityName>
+              <FunctionCode>POL</FunctionCode>
+              <LocationName>Nantong</LocationName>
+              <CityName>Nantong</CityName>
+              <StateProvince>Jiangsu</StateProvince>
+              <County>Nantong</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>JIU01</FacilityCode>
+              <FacilityName>Sipg Jiujiang Port Container Branch</FacilityName>
+              <FunctionCode>POD</FunctionCode>
+              <LocationName>Jiu jiang</LocationName>
+              <CityName>Jiujiang</CityName>
+              <StateProvince>Jiangxi</StateProvince>
+              <County>Jiujiang</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <VoyageEventDate>
+              <Departure Qualifier="0"></Departure>
+              <Arrival Qualifier="0"></Arrival>
+            </VoyageEventDate>
+          </VoyagePorts>
+          <IsBETD>N</IsBETD>
+        </RouteInfo>
+        <RouteInfo>
+          <Action>U</Action>
+          <RouteUUID>203568081908496641</RouteUUID>
+          <IsDropAndPull>0</IsDropAndPull>
+          <RoutEventDate>
+            <FullReturnCutoff TimeZone="CST">Oct 15 2019  8:00PM</FullReturnCutoff>
+            <EstArrivalFinalHubGMT></EstArrivalFinalHubGMT>
+          </RoutEventDate>
+          <Haulage>
+            <Outbound>M</Outbound>
+            <Inbound>M</Inbound>
+          </Haulage>
+          <RouteLocation>
+            <LocationDetails>
+              <FacilityCode>YIK01</FacilityCode>
+              <FacilityName>Yinkou COSCO Int'l Ctn Tml Co.,Ltd.</FacilityName>
+              <FunctionCode>ORG</FunctionCode>
+              <LocationName></LocationName>
+              <CityName>Yingkou</CityName>
+              <StateProvince>Liaoning</StateProvince>
+              <County>Yingkou</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>JIU01</FacilityCode>
+              <FacilityName>Sipg Jiujiang Port Container Branch</FacilityName>
+              <FunctionCode>FND</FunctionCode>
+              <LocationName></LocationName>
+              <CityName>Jiujiang</CityName>
+              <StateProvince>Jiangxi</StateProvince>
+              <County>Jiujiang</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>YIK01</FacilityCode>
+              <FacilityName>Yinkou COSCO Int'l Ctn Tml Co.,Ltd.</FacilityName>
+              <FunctionCode>POL</FunctionCode>
+              <LocationName>Yingkou</LocationName>
+              <CityName>Yingkou</CityName>
+              <StateProvince>Liaoning</StateProvince>
+              <County>Yingkou</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>JIU01</FacilityCode>
+              <FacilityName>Sipg Jiujiang Port Container Branch</FacilityName>
+              <FunctionCode>POD</FunctionCode>
+              <LocationName>Jiu jiang</LocationName>
+              <CityName>Jiujiang</CityName>
+              <StateProvince>Jiangxi</StateProvince>
+              <County>Jiujiang</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <DepartureDate Qualifier="0" TimeZone="CST">Oct 15 2019  8:00PM</DepartureDate>
+          </RouteLocation>
+          <RouteVoyage>
+            <VesselVoyageType>O</VesselVoyageType>
+            <VesselVoyageInfo>
+              <VoyageEvent>Loading</VoyageEvent>
+              <ServiceName>IC20</ServiceName>
+              <VoyageNumber>005</VoyageNumber>
+              <VoyageDirection>SOUTH</VoyageDirection>
+              <VesselInfo>
+                <VesselCode>TMY</VesselCode>
+                <VesselName>HONG TAI 222</VesselName>
+              </VesselInfo>
+            </VesselVoyageInfo>
+          </RouteVoyage>
+          <VoyagePorts>
+            <Action>U</Action>
+            <SequenceNumber>1</SequenceNumber>
+            <VesselVoyageType>OUTBOUND</VesselVoyageType>
+            <PolCallNumber>1</PolCallNumber>
+            <PodCallNumber>1</PodCallNumber>
+            <LocationDetails>
+              <FacilityCode>YIK01</FacilityCode>
+              <FacilityName>Yinkou COSCO Int'l Ctn Tml Co.,Ltd.</FacilityName>
+              <FunctionCode>POL</FunctionCode>
+              <LocationName>Yingkou</LocationName>
+              <CityName>Yingkou</CityName>
+              <StateProvince>Liaoning</StateProvince>
+              <County>Yingkou</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>NTG04</FacilityCode>
+              <FacilityName>Nantong Tonghai Port Co.,Ltd</FacilityName>
+              <FunctionCode>POD</FunctionCode>
+              <LocationName>Nantong</LocationName>
+              <CityName>Nantong</CityName>
+              <StateProvince>Jiangsu</StateProvince>
+              <County>Nantong</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <VesselVoyageInfo>
+              <VoyageEvent>Loading</VoyageEvent>
+              <ServiceName>IC20</ServiceName>
+              <VoyageNumber>005</VoyageNumber>
+              <VoyageDirection>SOUTH</VoyageDirection>
+              <VesselInfo>
+                <VesselCode>TMY</VesselCode>
+                <VesselName>HONG TAI 222</VesselName>
+              </VesselInfo>
+              <LoadingExtVoyage>005S</LoadingExtVoyage>
+              <DischargeExtVoyage>005S</DischargeExtVoyage>
+            </VesselVoyageInfo>
+            <VesselVoyageInfo>
+              <VoyageEvent>Discharging</VoyageEvent>
+              <ServiceName>IC20</ServiceName>
+              <VoyageNumber>005</VoyageNumber>
+              <VoyageDirection>SOUTH</VoyageDirection>
+              <VesselInfo>
+                <VesselCode>TMY</VesselCode>
+                <VesselName>HONG TAI 222</VesselName>
+              </VesselInfo>
+              <LoadingExtVoyage>006N</LoadingExtVoyage>
+              <DischargeExtVoyage>005S</DischargeExtVoyage>
+            </VesselVoyageInfo>
+            <VoyageEventDate>
+              <Departure Qualifier="0" TimeZone="CST">Oct 15 2019  8:00PM</Departure>
+              <DepartureGMT Qualifier="0" TimeZone="GMT">Oct 15 2019 12:00PM</DepartureGMT>
+              <Arrival Qualifier="0" TimeZone="CST">Oct 18 2019 10:00PM</Arrival>
+              <ArrivalGMT Qualifier="0" TimeZone="GMT">Oct 18 2019  2:00PM</ArrivalGMT>
+            </VoyageEventDate>
+          </VoyagePorts>
+          <VoyagePorts>
+            <Action>U</Action>
+            <SequenceNumber>2</SequenceNumber>
+            <VesselVoyageType>INBOUND</VesselVoyageType>
+            <LocationDetails>
+              <FacilityCode>NTG04</FacilityCode>
+              <FacilityName>Nantong Tonghai Port Co.,Ltd</FacilityName>
+              <FunctionCode>POL</FunctionCode>
+              <LocationName>Nantong</LocationName>
+              <CityName>Nantong</CityName>
+              <StateProvince>Jiangsu</StateProvince>
+              <County>Nantong</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>JIU01</FacilityCode>
+              <FacilityName>Sipg Jiujiang Port Container Branch</FacilityName>
+              <FunctionCode>POD</FunctionCode>
+              <LocationName>Jiu jiang</LocationName>
+              <CityName>Jiujiang</CityName>
+              <StateProvince>Jiangxi</StateProvince>
+              <County>Jiujiang</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <VoyageEventDate>
+              <Departure Qualifier="0"></Departure>
+              <Arrival Qualifier="0"></Arrival>
+            </VoyageEventDate>
+          </VoyagePorts>
+          <IsBETD>N</IsBETD>
+        </RouteInfo>
+        <RouteInfo>
+          <Action>U</Action>
+          <RouteUUID>203568081908496642</RouteUUID>
+          <IsDropAndPull>0</IsDropAndPull>
+          <RoutEventDate>
+            <FullReturnCutoff TimeZone="CST">Oct 15 2019  8:00PM</FullReturnCutoff>
+            <EstArrivalFinalHubGMT></EstArrivalFinalHubGMT>
+          </RoutEventDate>
+          <Haulage>
+            <Outbound>M</Outbound>
+            <Inbound>M</Inbound>
+          </Haulage>
+          <RouteLocation>
+            <LocationDetails>
+              <FacilityCode>YIK01</FacilityCode>
+              <FacilityName>Yinkou COSCO Int'l Ctn Tml Co.,Ltd.</FacilityName>
+              <FunctionCode>ORG</FunctionCode>
+              <LocationName></LocationName>
+              <CityName>Yingkou</CityName>
+              <StateProvince>Liaoning</StateProvince>
+              <County>Yingkou</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>JIU01</FacilityCode>
+              <FacilityName>Sipg Jiujiang Port Container Branch</FacilityName>
+              <FunctionCode>FND</FunctionCode>
+              <LocationName></LocationName>
+              <CityName>Jiujiang</CityName>
+              <StateProvince>Jiangxi</StateProvince>
+              <County>Jiujiang</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>YIK01</FacilityCode>
+              <FacilityName>Yinkou COSCO Int'l Ctn Tml Co.,Ltd.</FacilityName>
+              <FunctionCode>POL</FunctionCode>
+              <LocationName>Yingkou</LocationName>
+              <CityName>Yingkou</CityName>
+              <StateProvince>Liaoning</StateProvince>
+              <County>Yingkou</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>JIU01</FacilityCode>
+              <FacilityName>Sipg Jiujiang Port Container Branch</FacilityName>
+              <FunctionCode>POD</FunctionCode>
+              <LocationName>Jiu jiang</LocationName>
+              <CityName>Jiujiang</CityName>
+              <StateProvince>Jiangxi</StateProvince>
+              <County>Jiujiang</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <DepartureDate Qualifier="0" TimeZone="CST">Oct 15 2019  8:00PM</DepartureDate>
+          </RouteLocation>
+          <RouteVoyage>
+            <VesselVoyageType>O</VesselVoyageType>
+            <VesselVoyageInfo>
+              <VoyageEvent>Loading</VoyageEvent>
+              <ServiceName>IC20</ServiceName>
+              <VoyageNumber>005</VoyageNumber>
+              <VoyageDirection>SOUTH</VoyageDirection>
+              <VesselInfo>
+                <VesselCode>TMY</VesselCode>
+                <VesselName>HONG TAI 222</VesselName>
+              </VesselInfo>
+            </VesselVoyageInfo>
+          </RouteVoyage>
+          <VoyagePorts>
+            <Action>U</Action>
+            <SequenceNumber>2</SequenceNumber>
+            <VesselVoyageType>INBOUND</VesselVoyageType>
+            <LocationDetails>
+              <FacilityCode>NTG04</FacilityCode>
+              <FacilityName>Nantong Tonghai Port Co.,Ltd</FacilityName>
+              <FunctionCode>POL</FunctionCode>
+              <LocationName>Nantong</LocationName>
+              <CityName>Nantong</CityName>
+              <StateProvince>Jiangsu</StateProvince>
+              <County>Nantong</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>JIU01</FacilityCode>
+              <FacilityName>Sipg Jiujiang Port Container Branch</FacilityName>
+              <FunctionCode>POD</FunctionCode>
+              <LocationName>Jiu jiang</LocationName>
+              <CityName>Jiujiang</CityName>
+              <StateProvince>Jiangxi</StateProvince>
+              <County>Jiujiang</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <VoyageEventDate>
+              <Departure Qualifier="0"></Departure>
+              <Arrival Qualifier="0"></Arrival>
+            </VoyageEventDate>
+          </VoyagePorts>
+          <VoyagePorts>
+            <Action>U</Action>
+            <SequenceNumber>1</SequenceNumber>
+            <VesselVoyageType>OUTBOUND</VesselVoyageType>
+            <PolCallNumber>1</PolCallNumber>
+            <PodCallNumber>1</PodCallNumber>
+            <LocationDetails>
+              <FacilityCode>YIK01</FacilityCode>
+              <FacilityName>Yinkou COSCO Int'l Ctn Tml Co.,Ltd.</FacilityName>
+              <FunctionCode>POL</FunctionCode>
+              <LocationName>Yingkou</LocationName>
+              <CityName>Yingkou</CityName>
+              <StateProvince>Liaoning</StateProvince>
+              <County>Yingkou</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <LocationDetails>
+              <FacilityCode>NTG04</FacilityCode>
+              <FacilityName>Nantong Tonghai Port Co.,Ltd</FacilityName>
+              <FunctionCode>POD</FunctionCode>
+              <LocationName>Nantong</LocationName>
+              <CityName>Nantong</CityName>
+              <StateProvince>Jiangsu</StateProvince>
+              <County>Nantong</County>
+              <CountryCode></CountryCode>
+              <CountryName>China</CountryName>
+              <PostalCode></PostalCode>
+            </LocationDetails>
+            <VesselVoyageInfo>
+              <VoyageEvent>Loading</VoyageEvent>
+              <ServiceName>IC20</ServiceName>
+              <VoyageNumber>005</VoyageNumber>
+              <VoyageDirection>SOUTH</VoyageDirection>
+              <VesselInfo>
+                <VesselCode>TMY</VesselCode>
+                <VesselName>HONG TAI 222</VesselName>
+              </VesselInfo>
+              <LoadingExtVoyage>005S</LoadingExtVoyage>
+              <DischargeExtVoyage>005S</DischargeExtVoyage>
+            </VesselVoyageInfo>
+            <VesselVoyageInfo>
+              <VoyageEvent>Discharging</VoyageEvent>
+              <ServiceName>IC20</ServiceName>
+              <VoyageNumber>005</VoyageNumber>
+              <VoyageDirection>SOUTH</VoyageDirection>
+              <VesselInfo>
+                <VesselCode>TMY</VesselCode>
+                <VesselName>HONG TAI 222</VesselName>
+              </VesselInfo>
+              <LoadingExtVoyage>006N</LoadingExtVoyage>
+              <DischargeExtVoyage>005S</DischargeExtVoyage>
+            </VesselVoyageInfo>
+            <VoyageEventDate>
+              <Departure Qualifier="0" TimeZone="CST">Oct 15 2019  8:00PM</Departure>
+              <DepartureGMT Qualifier="0" TimeZone="GMT">Oct 15 2019 12:00PM</DepartureGMT>
+              <Arrival Qualifier="0" TimeZone="CST">Oct 18 2019 10:00PM</Arrival>
+              <ArrivalGMT Qualifier="0" TimeZone="GMT">Oct 18 2019  2:00PM</ArrivalGMT>
+            </VoyageEventDate>
+          </VoyagePorts>
+          <IsBETD>N</IsBETD>
+        </RouteInfo>
+        <EquipmentInfo>
+          <Container>
+            <Action>U</Action>
+            <ContainerUUID>203568081908496640</ContainerUUID>
+            <ContainerNumber CheckDigit="7">TEMU409577</ContainerNumber>
+            <ContainerType>20GP</ContainerType>
+            <ISOSizeType>2200</ISOSizeType>
+            <IsSOC>0</IsSOC>
+            <Weight Units="KG">25000.000</Weight>
+            <SealNumber Type="TM">005007</SealNumber>
+            <ContainerEventInfo>
+              <Event>Covered</Event>
+              <EventDescription>Covered</EventDescription>
+              <LastTransferToBookingId>CurrentTimeMillis</LastTransferToBookingId>
+              <CustomsInfo>
+                <CustomsRefNumber></CustomsRefNumber>
+                <CustomsRefType></CustomsRefType>
+                <CustomsRefDate TimeZone=""></CustomsRefDate>
+                <CustomsClearanceLocCity></CustomsClearanceLocCity>
+              </CustomsInfo>
+            </ContainerEventInfo>
+            <DraftContainerNumber>X066M9C</DraftContainerNumber>
+            <IsMyReefer>0</IsMyReefer>
+          </Container>
+          <Container>
+            <Action>U</Action>
+            <ContainerUUID>203568081908496638</ContainerUUID>
+            <ContainerNumber CheckDigit=""></ContainerNumber>
+            <ContainerType>20GP</ContainerType>
+            <IsSOC>0</IsSOC>
+            <Weight Units="KG">25000.000</Weight>
+            <ContainerEventInfo>
+              <Event>Open</Event>
+              <EventDescription>Empty container not picked up by customer</EventDescription>
+              <LastTransferToBookingId>CurrentTimeMillis</LastTransferToBookingId>
+              <CustomsInfo>
+                <CustomsRefNumber></CustomsRefNumber>
+                <CustomsRefType></CustomsRefType>
+                <CustomsRefDate TimeZone=""></CustomsRefDate>
+                <CustomsClearanceLocCity></CustomsClearanceLocCity>
+              </CustomsInfo>
+            </ContainerEventInfo>
+            <DraftContainerNumber>X066M9A</DraftContainerNumber>
+            <IsMyReefer>0</IsMyReefer>
+          </Container>
+          <Container>
+            <Action>U</Action>
+            <ContainerUUID>203568081908496639</ContainerUUID>
+            <ContainerNumber CheckDigit=""></ContainerNumber>
+            <ContainerType>20GP</ContainerType>
+            <IsSOC>0</IsSOC>
+            <Weight Units="KG">25000.000</Weight>
+            <ContainerEventInfo>
+              <Event>Open</Event>
+              <EventDescription>Empty container not picked up by customer</EventDescription>
+              <LastTransferToBookingId>CurrentTimeMillis</LastTransferToBookingId>
+              <CustomsInfo>
+                <CustomsRefNumber></CustomsRefNumber>
+                <CustomsRefType></CustomsRefType>
+                <CustomsRefDate TimeZone=""></CustomsRefDate>
+                <CustomsClearanceLocCity></CustomsClearanceLocCity>
+              </CustomsInfo>
+            </ContainerEventInfo>
+            <DraftContainerNumber>X066M9B</DraftContainerNumber>
+            <IsMyReefer>0</IsMyReefer>
+          </Container>
+          <Container>
+            <Action>U</Action>
+            <ContainerUUID>203568081908496641</ContainerUUID>
+            <ContainerNumber CheckDigit=""></ContainerNumber>
+            <ContainerType>20GP</ContainerType>
+            <IsSOC>0</IsSOC>
+            <Weight Units="KG">25000.000</Weight>
+            <ContainerEventInfo>
+              <Event>Open</Event>
+              <EventDescription>Empty container not picked up by customer</EventDescription>
+              <LastTransferToBookingId>CurrentTimeMillis</LastTransferToBookingId>
+              <CustomsInfo>
+                <CustomsRefNumber></CustomsRefNumber>
+                <CustomsRefType></CustomsRefType>
+                <CustomsRefDate TimeZone=""></CustomsRefDate>
+                <CustomsClearanceLocCity></CustomsClearanceLocCity>
+              </CustomsInfo>
+            </ContainerEventInfo>
+            <DraftContainerNumber>X066M9D</DraftContainerNumber>
+            <IsMyReefer>0</IsMyReefer>
+          </Container>
+          <Container>
+            <Action>U</Action>
+            <ContainerUUID>203568081908496642</ContainerUUID>
+            <ContainerNumber CheckDigit="8">CSLU121994</ContainerNumber>
+            <ContainerType>20GP</ContainerType>
+            <ISOSizeType>22G1</ISOSizeType>
+            <IsSOC>0</IsSOC>
+            <Weight Units="KG">25000.000</Weight>
+            <SealNumber Type="TM">005016</SealNumber>
+            <ContainerEventInfo>
+              <Event>Covered</Event>
+              <EventDescription>Covered</EventDescription>
+              <LastTransferToBookingId>CurrentTimeMillis</LastTransferToBookingId>
+              <CustomsInfo>
+                <CustomsRefNumber></CustomsRefNumber>
+                <CustomsRefType></CustomsRefType>
+                <CustomsRefDate TimeZone=""></CustomsRefDate>
+                <CustomsClearanceLocCity></CustomsClearanceLocCity>
+              </CustomsInfo>
+            </ContainerEventInfo>
+            <DraftContainerNumber>X066M9E</DraftContainerNumber>
+            <IsMyReefer>0</IsMyReefer>
+          </Container>
+          <Container>
+            <Action>U</Action>
+            <ContainerUUID>203568081908496643</ContainerUUID>
+            <ContainerNumber CheckDigit=""></ContainerNumber>
+            <ContainerType>20GP</ContainerType>
+            <IsSOC>0</IsSOC>
+            <Weight Units="KG">25000.000</Weight>
+            <ContainerEventInfo>
+              <Event>Open</Event>
+              <EventDescription>Empty container not picked up by customer</EventDescription>
+              <LastTransferToBookingId>CurrentTimeMillis</LastTransferToBookingId>
+              <CustomsInfo>
+                <CustomsRefNumber></CustomsRefNumber>
+                <CustomsRefType></CustomsRefType>
+                <CustomsRefDate TimeZone=""></CustomsRefDate>
+                <CustomsClearanceLocCity></CustomsClearanceLocCity>
+              </CustomsInfo>
+            </ContainerEventInfo>
+            <DraftContainerNumber>X066M9F</DraftContainerNumber>
+            <IsMyReefer>0</IsMyReefer>
+          </Container>
+        </EquipmentInfo>
+        <CargoInfo>
+          <Cargo>
+            <Action>U</Action>
+            <CargoUUID>211568081920342407</CargoUUID>
+            <CargoNature>General</CargoNature>
+            <CargoDescription>
+              <DescriptionLine>YangHuaMei</DescriptionLine>
+            </CargoDescription>
+            <NetWeight>0</NetWeight>
+            <GrossWeight Units="KG">25000</GrossWeight>
+            <Volume>0</Volume>
+            <InnerPackageType>CN</InnerPackageType>
+            <InnerPackageQty>1</InnerPackageQty>
+            <InnerPackDescription>
+              <DescriptionLine>YangHuaMei</DescriptionLine>
+            </InnerPackDescription>
+            <CustomsInfo>
+              <CustomsRefNumber></CustomsRefNumber>
+              <CustomsRefType></CustomsRefType>
+              <CustomsRefDate TimeZone=""></CustomsRefDate>
+              <CustomsClearanceLocCity></CustomsClearanceLocCity>
+            </CustomsInfo>
+          </Cargo>
+          <Cargo>
+            <Action>U</Action>
+            <CargoUUID>211568081920347411</CargoUUID>
+            <CargoNature>General</CargoNature>
+            <CargoDescription>
+              <DescriptionLine>YangHuaMei</DescriptionLine>
+            </CargoDescription>
+            <NetWeight>0</NetWeight>
+            <GrossWeight Units="KG">25000</GrossWeight>
+            <Volume>0</Volume>
+            <InnerPackageType>CN</InnerPackageType>
+            <InnerPackageQty>1</InnerPackageQty>
+            <InnerPackDescription>
+              <DescriptionLine>YangHuaMei</DescriptionLine>
+            </InnerPackDescription>
+            <CustomsInfo>
+              <CustomsRefNumber></CustomsRefNumber>
+              <CustomsRefType></CustomsRefType>
+              <CustomsRefDate TimeZone=""></CustomsRefDate>
+              <CustomsClearanceLocCity></CustomsClearanceLocCity>
+            </CustomsInfo>
+          </Cargo>
+          <Cargo>
+            <Action>U</Action>
+            <CargoUUID>211568081920351414</CargoUUID>
+            <CargoNature>General</CargoNature>
+            <CargoDescription>
+              <DescriptionLine>YangHuaMei</DescriptionLine>
+            </CargoDescription>
+            <NetWeight>0</NetWeight>
+            <GrossWeight Units="KG">25000</GrossWeight>
+            <Volume>0</Volume>
+            <InnerPackageType>CN</InnerPackageType>
+            <InnerPackageQty>1</InnerPackageQty>
+            <InnerPackDescription>
+              <DescriptionLine>YangHuaMei</DescriptionLine>
+            </InnerPackDescription>
+            <ContainerNumber>TEMU409577</ContainerNumber>
+            <CustomsInfo>
+              <CustomsRefNumber></CustomsRefNumber>
+              <CustomsRefType></CustomsRefType>
+              <CustomsRefDate TimeZone=""></CustomsRefDate>
+              <CustomsClearanceLocCity></CustomsClearanceLocCity>
+            </CustomsInfo>
+          </Cargo>
+          <Cargo>
+            <Action>U</Action>
+            <CargoUUID>211568081920354418</CargoUUID>
+            <CargoNature>General</CargoNature>
+            <CargoDescription>
+              <DescriptionLine>YangHuaMei</DescriptionLine>
+            </CargoDescription>
+            <NetWeight>0</NetWeight>
+            <GrossWeight Units="KG">25000</GrossWeight>
+            <Volume>0</Volume>
+            <InnerPackageType>CN</InnerPackageType>
+            <InnerPackageQty>1</InnerPackageQty>
+            <InnerPackDescription>
+              <DescriptionLine>YangHuaMei</DescriptionLine>
+            </InnerPackDescription>
+            <CustomsInfo>
+              <CustomsRefNumber></CustomsRefNumber>
+              <CustomsRefType></CustomsRefType>
+              <CustomsRefDate TimeZone=""></CustomsRefDate>
+              <CustomsClearanceLocCity></CustomsClearanceLocCity>
+            </CustomsInfo>
+          </Cargo>
+          <Cargo>
+            <Action>U</Action>
+            <CargoUUID>211568081920359426</CargoUUID>
+            <CargoNature>General</CargoNature>
+            <CargoDescription>
+              <DescriptionLine>YangHuaMei</DescriptionLine>
+            </CargoDescription>
+            <NetWeight>0</NetWeight>
+            <GrossWeight Units="KG">25000</GrossWeight>
+            <Volume>0</Volume>
+            <InnerPackageType>CN</InnerPackageType>
+            <InnerPackageQty>1</InnerPackageQty>
+            <InnerPackDescription>
+              <DescriptionLine>YangHuaMei</DescriptionLine>
+            </InnerPackDescription>
+            <ContainerNumber>CSLU121994</ContainerNumber>
+            <CustomsInfo>
+              <CustomsRefNumber></CustomsRefNumber>
+              <CustomsRefType></CustomsRefType>
+              <CustomsRefDate TimeZone=""></CustomsRefDate>
+              <CustomsClearanceLocCity></CustomsClearanceLocCity>
+            </CustomsInfo>
+          </Cargo>
+          <Cargo>
+            <Action>U</Action>
+            <CargoUUID>211568081920374436</CargoUUID>
+            <CargoNature>General</CargoNature>
+            <CargoDescription>
+              <DescriptionLine>YangHuaMei</DescriptionLine>
+            </CargoDescription>
+            <NetWeight>0</NetWeight>
+            <GrossWeight Units="KG">25000</GrossWeight>
+            <Volume>0</Volume>
+            <InnerPackageType>CN</InnerPackageType>
+            <InnerPackageQty>1</InnerPackageQty>
+            <InnerPackDescription>
+              <DescriptionLine>YangHuaMei</DescriptionLine>
+            </InnerPackDescription>
+            <CustomsInfo>
+              <CustomsRefNumber></CustomsRefNumber>
+              <CustomsRefType></CustomsRefType>
+              <CustomsRefDate TimeZone=""></CustomsRefDate>
+              <CustomsClearanceLocCity></CustomsClearanceLocCity>
+            </CustomsInfo>
+          </Cargo>
+        </CargoInfo>
+        <ReferenceInfo>
+          <Reference>
+            <Action>U</Action>
+            <ReferenceType>CSO/Agreement Number</ReferenceType>
+            <ReferenceNumber>D0200289001v3</ReferenceNumber>
+          </Reference>
+          <Reference>
+            <Action>U</Action>
+            <ReferenceType>EPA ORDER ID</ReferenceType>
+            <ReferenceNumber>EDOB100000838508</ReferenceNumber>
+          </Reference>
+          <Reference>
+            <Action>U</Action>
+            <ReferenceType>File Identifier</ReferenceType>
+            <ReferenceNumber>EDOB100000838508</ReferenceNumber>
+          </Reference>
+        </ReferenceInfo>
+        <RateInfo>
+          <Rate>
+            <Action>U</Action>
+            <RateType>CSO</RateType>
+            <RateNumber>D0200289001v3</RateNumber>
+          </Rate>
+        </RateInfo>
+        <BLInfo>
+          <BL>
+            <Action>U</Action>
+            <BLNumber>CurrentTimeMillis</BLNumber>
+          </BL>
+        </BLInfo>
+      </ShipmentDetails>
+    </MessageBody>
+  </Confirmation>
+</BookingConfirmation>

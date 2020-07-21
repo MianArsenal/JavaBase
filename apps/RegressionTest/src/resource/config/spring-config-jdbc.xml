@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="oracleDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" abstract="true">
+        <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+        <property name="url" value="${oracle.url}"/>
+    </bean>
+
+    <bean id="supportJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource">
+            <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" parent="oracleDataSource">
+                <property name="username" value="${oracle.username.support}"/>
+                <property name="password" value="${oracle.password.support}"/>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="partyJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource">
+            <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" parent="oracleDataSource">
+                <property name="username" value="${oracle.username.party}"/>
+                <property name="password" value="${oracle.password.party}"/>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="adminJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource">
+            <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" parent="oracleDataSource">
+                <property name="username" value="${oracle.username.admin}"/>
+                <property name="password" value="${oracle.password.admin}"/>
+            </bean>
+        </property>
+    </bean>
+
+</beans>

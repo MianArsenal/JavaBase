@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="jndiTemplate" class="org.springframework.jndi.JndiTemplate">
+        <property name="environment">
+            <props>
+                <prop key="java.naming.factory.initial">com.tibco.tibjms.naming.TibjmsInitialContextFactory</prop>
+                <prop key="java.naming.provider.url">${ems.url}</prop>
+                <prop key="java.naming.security.principal">${ems.principal}</prop>
+                <prop key="java.naming.security.credentials">${ems.credentials}</prop>
+                <prop key="NUMBER_OF_OC4J">1</prop>
+                <prop key="INTERVAL_MS_OF_MONITOR">10000</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="jndiDestinationResolver" class="org.springframework.jms.support.destination.JndiDestinationResolver">
+        <property name="cache" value="false"/>
+        <property name="jndiTemplate" ref="jndiTemplate"/>
+    </bean>
+
+
+    <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate" abstract="true">
+        <property name="destinationResolver" ref="jndiDestinationResolver"/>
+        <property name="receiveTimeout" value="30000"/>
+        <property name="sessionTransacted" value="false"/>
+        <property name="deliveryMode" ref="deliveryMode"/>
+        <property name="sessionAcknowledgeMode" ref="sessionAcknowledgeMode"/>
+    </bean>
+
+    <bean id="deliveryMode" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean">
+        <property name="staticField" value="com.tibco.tibjms.Tibjms.RELIABLE_DELIVERY"/>
+    </bean>
+
+    <bean id="sessionAcknowledgeMode" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean">
+        <property name="staticField" value="javax.jms.Session.CLIENT_ACKNOWLEDGE"/>
+    </bean>
+
+    <bean id="userCredentialsConnectionFactoryAdapter" class="org.springframework.jms.connection.UserCredentialsConnectionFactoryAdapter" abstract="true">
+        <property name="username" value="${ems.principal}"/>
+        <property name="password" value="${ems.credentials}"/>
+    </bean>
+
+    <bean id="jmsQueueTemplate" class="org.springframework.jms.core.JmsTemplate" parent="jmsTemplate">
+        <property name="pubSubDomain" value="false"/>
+        <property name="connectionFactory">
+            <bean class="org.springframework.jms.connection.SingleConnectionFactory">
+                <property name="targetConnectionFactory">
+                    <bean class="org.springframework.jms.connection.UserCredentialsConnectionFactoryAdapter" parent="userCredentialsConnectionFactoryAdapter">
+                        <property name="targetConnectionFactory">
+                            <bean class="com.tibco.tibjms.TibjmsQueueConnectionFactory">
+                                <constructor-arg type="java.lang.String" value="${ems.url}"/>
+                            </bean>
+                        </property>
+                    </bean>
+                </property>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="jmsTopicTemplate" class="org.springframework.jms.core.JmsTemplate" parent="jmsTemplate">
+        <property name="pubSubDomain" value="true"/>
+        <property name="connectionFactory">
+            <bean class="org.springframework.jms.connection.SingleConnectionFactory">
+                <property name="targetConnectionFactory">
+                    <bean class="org.springframework.jms.connection.UserCredentialsConnectionFactoryAdapter" parent="userCredentialsConnectionFactoryAdapter">
+                        <property name="targetConnectionFactory">
+                            <bean class="com.tibco.tibjms.TibjmsTopicConnectionFactory">
+                                <constructor-arg type="java.lang.String" value="${ems.url}"/>
+                            </bean>
+                        </property>
+                    </bean>
+                </property>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="emsTemplate" class="com.regression.util.EmsTemplate">
+        <property name="jmsQueueTemplate" ref="jmsQueueTemplate"/>
+        <property name="jmsTopicTemplate" ref="jmsTopicTemplate"/>
+    </bean>
+</beans>

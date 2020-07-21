@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="spring-config-ems.xml"/>
+    <import resource="spring-config-jdbc.xml"/>
+
+    <bean id="bookingConfirmPrepare" class="com.regression.modules.bc.prepare.BookingConfirmPrepare">
+        <property name="emsTemplate" ref="emsTemplate"/>
+    </bean>
+
+    <bean id="bookingConfirmValidate" class="com.regression.modules.bc.validate.BookingConfirmValidate">
+        <property name="partyJdbcTemplate" ref="partyJdbcTemplate"/>
+        <property name="adminJdbcTemplate" ref="adminJdbcTemplate"/>
+        <property name="supportJdbcTemplate" ref="supportJdbcTemplate"/>
+    </bean>
+</beans>

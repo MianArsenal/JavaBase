@@ -2,5 +2,6 @@
 *.iml
 *.class
 apps/javabase/out/
+apps/RegressionTest/out/
 apps/javabase/target/classes
 apps/javabase/\.idea/
