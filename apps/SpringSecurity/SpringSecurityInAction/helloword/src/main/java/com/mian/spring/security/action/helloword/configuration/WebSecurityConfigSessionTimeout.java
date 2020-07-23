@@ -1,13 +1,11 @@
 package com.mian.spring.security.action.helloword.configuration;
 
-import com.mian.spring.security.action.helloword.authentication.strategy.MyInvalidSessionStrategy;
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.session.HttpSessionEventPublisher;
 
-@EnableWebSecurity
+//@EnableWebSecurity
 public class WebSecurityConfigSessionTimeout extends WebSecurityConfigurerAdapter {
 
     @Override
