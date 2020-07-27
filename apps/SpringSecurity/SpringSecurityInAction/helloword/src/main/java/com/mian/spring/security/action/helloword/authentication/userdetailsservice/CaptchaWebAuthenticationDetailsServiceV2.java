@@ -9,8 +9,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
-//@Service
+@Service
 public class CaptchaWebAuthenticationDetailsServiceV2 implements UserDetailsService {
 
     @Autowired
