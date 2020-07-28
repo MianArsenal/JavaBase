@@ -71,15 +71,15 @@ public class WebSecurityConfigCors  extends WebSecurityConfigurerAdapter {
                 .csrf().disable();
     }
 
-    @Bean
-    public CorsConfigurationSource corsConfigurationSource() {
-        CorsConfiguration corsConfiguration = new CorsConfiguration();
-        corsConfiguration.setAllowedOrigins(Arrays.asList("http://localhost:8083"));
-        corsConfiguration.setAllowedMethods(Arrays.asList("GET", "POST"));
-        corsConfiguration.setAllowCredentials(true);
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-//        source.registerCorsConfiguration("/**", corsConfiguration);
-        source.registerCorsConfiguration("/cors/hello", corsConfiguration);
-        return source;
-    }
+//    @Bean
+//    public CorsConfigurationSource corsConfigurationSource() {
+//        CorsConfiguration corsConfiguration = new CorsConfiguration();
+//        corsConfiguration.setAllowedOrigins(Arrays.asList("http://localhost:8083"));
+//        corsConfiguration.setAllowedMethods(Arrays.asList("GET", "POST"));
+//        corsConfiguration.setAllowCredentials(true);
+//        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+////        source.registerCorsConfiguration("/**", corsConfiguration);
+//        source.registerCorsConfiguration("/cors/hello", corsConfiguration);
+//        return source;
+//    }
 }
