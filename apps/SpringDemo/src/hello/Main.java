@@ -9,7 +9,8 @@ public class Main {
         //创建IOC容器
         ApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
         //获取bean
-        HelloWorld springHelloWorld = (HelloWorld) context.getBean("helloWorld");
+//        HelloWorld springHelloWorld = (HelloWorld) context.getBean("helloWorld");
+        HelloWorld springHelloWorld = context.getBean(HelloWorld.class);
         springHelloWorld.sayHello();
 //        springHelloWorld.sayYes();
     }
