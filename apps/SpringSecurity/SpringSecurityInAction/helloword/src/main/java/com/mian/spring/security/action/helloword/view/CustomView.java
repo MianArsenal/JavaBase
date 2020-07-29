@@ -28,7 +28,6 @@ public class CustomView implements View {
     }
 
     private String htmlWithToken(HttpServletRequest httpServletRequest) throws IOException {
-        System.out.println(viewName);
         String html = IOUtils.toString(
                 getClass().getResourceAsStream("/static/" + viewName + ".html"),
                 StandardCharsets.UTF_8);
