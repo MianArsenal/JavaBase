@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>csrf</title>
+</head>
+<body>
+    <div align="center">
+        <form action="/csrfAnswer" method="post">
+            <input type="text" name="_csrf" id="csrfInput" value="current_csrf_code"/>
+            <input type="submit" value="csrf"/>
+        </form>
+    </div>
+</body>
+<script type="text/javascript">
+    console.log(document.cookie);
+</script>
+</html>

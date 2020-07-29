@@ -7417,3 +7417,126 @@
 2020-07-28 07:13:13.109 ERROR 22660 --- [DefaultMessageListenerContainer-1] o.s.j.l.DefaultMessageListenerContainer  : Could not refresh JMS Connection for destination 'simple.producer.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=7291, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused: connect
 2020-07-28 07:13:17.183 ERROR 22660 --- [DefaultMessageListenerContainer-1] o.s.j.l.DefaultMessageListenerContainer  : Could not refresh JMS Connection for destination 'simple.producer.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=7292, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused: connect
 2020-07-28 07:13:20.121 ERROR 22660 --- [DefaultMessageListenerContainer-1] o.s.j.l.DefaultMessageListenerContainer  : Could not refresh JMS Connection for destination 'simple.producer.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=7292, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused: connect
+2020-07-28 12:59:06.119  INFO 22660 --- [http-nio-8383-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-28 12:59:06.119  INFO 22660 --- [http-nio-8383-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-28 12:59:06.151  INFO 22660 --- [http-nio-8383-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 32 ms
+2020-07-28 12:59:20.266  INFO 22660 --- [http-nio-8383-exec-3] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:414) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:294) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:836) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1747) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_131]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+
+2020-07-28 21:54:55.317  WARN 22660 --- [RMI TCP Accept-0] sun.rmi.transport.tcp                    : RMI TCP Accept-0: accept loop for ServerSocket[addr=0.0.0.0/0.0.0.0,localport=64984] throws
+
+java.io.IOException: The server sockets created using the LocalRMIServerSocketFactory only accept connections from clients running on the host where the RMI remote objects have been exported.
+	at sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:114) ~[na:1.8.0_131]
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:400) [na:1.8.0_131]
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:372) [na:1.8.0_131]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+
+2020-07-28 21:55:15.829  WARN 22660 --- [RMI TCP Accept-0] sun.rmi.transport.tcp                    : RMI TCP Accept-0: accept loop for ServerSocket[addr=0.0.0.0/0.0.0.0,localport=64984] throws
+
+java.io.IOException: The server sockets created using the LocalRMIServerSocketFactory only accept connections from clients running on the host where the RMI remote objects have been exported.
+	at sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:114) ~[na:1.8.0_131]
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:400) [na:1.8.0_131]
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:372) [na:1.8.0_131]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+
+2020-07-28 21:55:34.174  WARN 22660 --- [RMI TCP Accept-0] sun.rmi.transport.tcp                    : RMI TCP Accept-0: accept loop for ServerSocket[addr=0.0.0.0/0.0.0.0,localport=64984] throws
+
+java.io.IOException: The server sockets created using the LocalRMIServerSocketFactory only accept connections from clients running on the host where the RMI remote objects have been exported.
+	at sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:114) ~[na:1.8.0_131]
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:400) [na:1.8.0_131]
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:372) [na:1.8.0_131]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+
+2020-07-28 21:56:07.121  WARN 22660 --- [RMI TCP Accept-0] sun.rmi.transport.tcp                    : RMI TCP Accept-0: accept loop for ServerSocket[addr=0.0.0.0/0.0.0.0,localport=64984] throws
+
+java.io.IOException: The server sockets created using the LocalRMIServerSocketFactory only accept connections from clients running on the host where the RMI remote objects have been exported.
+	at sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:114) ~[na:1.8.0_131]
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:400) [na:1.8.0_131]
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:372) [na:1.8.0_131]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+
+2020-07-28 21:57:07.676  WARN 22660 --- [RMI TCP Accept-0] sun.rmi.transport.tcp                    : RMI TCP Accept-0: accept loop for ServerSocket[addr=0.0.0.0/0.0.0.0,localport=64984] throws
+
+java.io.IOException: The server sockets created using the LocalRMIServerSocketFactory only accept connections from clients running on the host where the RMI remote objects have been exported.
+	at sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:114) ~[na:1.8.0_131]
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:400) [na:1.8.0_131]
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:372) [na:1.8.0_131]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+
+2020-07-28 21:57:07.901  WARN 22660 --- [RMI TCP Accept-0] sun.rmi.transport.tcp                    : RMI TCP Accept-0: accept loop for ServerSocket[addr=0.0.0.0/0.0.0.0,localport=64984] throws
+
+java.io.IOException: The server sockets created using the LocalRMIServerSocketFactory only accept connections from clients running on the host where the RMI remote objects have been exported.
+	at sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:114) ~[na:1.8.0_131]
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:400) [na:1.8.0_131]
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:372) [na:1.8.0_131]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+
+2020-07-28 21:57:54.027  WARN 22660 --- [RMI TCP Accept-0] sun.rmi.transport.tcp                    : RMI TCP Accept-0: accept loop for ServerSocket[addr=0.0.0.0/0.0.0.0,localport=64984] throws
+
+java.io.IOException: The server sockets created using the LocalRMIServerSocketFactory only accept connections from clients running on the host where the RMI remote objects have been exported.
+	at sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:114) ~[na:1.8.0_131]
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:400) [na:1.8.0_131]
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:372) [na:1.8.0_131]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+
+2020-07-28 21:58:18.050  INFO 22660 --- [http-nio-8383-exec-4] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in the HTTP protocol
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:531) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:294) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:836) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1747) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_131]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+
+2020-07-28 21:59:10.582  WARN 22660 --- [http-nio-8383-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Path contains "../" after call to StringUtils#cleanPath: [.../.../.../.../.../.../.../.../.../windows/win.ini]
+2020-07-28 21:59:10.684  WARN 22660 --- [http-nio-8383-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Path contains "../" after call to StringUtils#cleanPath: [.../.../.../.../.../.../.../.../.../winnt/win.ini]
+2020-07-28 21:59:11.087  WARN 22660 --- [http-nio-8383-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Path contains "../" after call to StringUtils#cleanPath: [..../..../..../..../..../..../..../..../..../windows/win.ini]
+2020-07-28 21:59:11.148  WARN 22660 --- [http-nio-8383-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Path contains "../" after call to StringUtils#cleanPath: [..../..../..../..../..../..../..../..../..../winnt/win.ini]
+2020-07-28 21:59:12.292  WARN 22660 --- [http-nio-8383-exec-8] o.s.w.s.r.ResourceHttpRequestHandler     : Path contains "../" after call to StringUtils#cleanPath: [�../�../�../�../�../�../windows/win.ini]
+2020-07-28 21:59:12.410  WARN 22660 --- [http-nio-8383-exec-9] o.s.w.s.r.ResourceHttpRequestHandler     : Path contains "../" after call to StringUtils#cleanPath: [�../�../�../�../�../�../winnt/win.ini]
+2020-07-28 22:00:22.386  INFO 22660 --- [http-nio-8383-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : -----filter user-----
+2020-07-28 22:00:22.387  INFO 22660 --- [http-nio-8383-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : paramValue:GB2312
+2020-07-28 22:00:22.387  INFO 22660 --- [http-nio-8383-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : /user/index.php
+2020-07-28 22:00:22.387  INFO 22660 --- [http-nio-8383-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : //user/index.php
+2020-07-28 22:00:22.387  INFO 22660 --- [http-nio-8383-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : 10.222.145.22
+2020-07-28 22:00:22.387  INFO 22660 --- [http-nio-8383-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : null
+2020-07-28 22:00:22.390  INFO 22660 --- [http-nio-8383-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : MIHE-W10.corp.oocl.com
+2020-07-28 22:00:22.390  INFO 22660 --- [http-nio-8383-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : 10.222.153.14
+2020-07-28 22:00:22.390  INFO 22660 --- [http-nio-8383-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : null
+2020-07-28 22:00:22.390  INFO 22660 --- [http-nio-8383-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : java.util.Collections$3@726ed15f
+2020-07-28 22:00:22.390  INFO 22660 --- [http-nio-8383-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : java.util.Collections$3@6e735ca6
+2020-07-28 22:00:35.623  WARN 22660 --- [http-nio-8383-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: Could not parse 'Accept' header [yaml]: Invalid mime type "yaml": does not contain '/']
+2020-07-28 22:00:35.652  WARN 22660 --- [http-nio-8383-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: Could not parse 'Accept' header [yaml]: Invalid mime type "yaml": does not contain '/']
+2020-07-28 22:00:35.675  WARN 22660 --- [http-nio-8383-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: Could not parse 'Accept' header [yaml]: Invalid mime type "yaml": does not contain '/']
+2020-07-28 22:00:35.699  WARN 22660 --- [http-nio-8383-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: Could not parse 'Accept' header [yaml]: Invalid mime type "yaml": does not contain '/']
+2020-07-28 22:00:35.728  WARN 22660 --- [http-nio-8383-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: Could not parse 'Accept' header [yaml]: Invalid mime type "yaml": does not contain '/']
+2020-07-28 22:00:36.500  WARN 22660 --- [http-nio-8383-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acceptable representation]
+2020-07-28 22:00:41.763  WARN 22660 --- [http-nio-8383-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Path with "WEB-INF" or "META-INF": [WEB-INF./web.xml]
+2020-07-28 22:01:17.246  WARN 22660 --- [http-nio-8383-exec-9] o.s.w.s.r.ResourceHttpRequestHandler     : Path contains "../" after call to StringUtils#cleanPath: [../../../../windows/win.ini]
+2020-07-28 22:01:17.274  WARN 22660 --- [http-nio-8383-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Path contains "../" after call to StringUtils#cleanPath: [../../../../winnt/win.ini]
+2020-07-28 22:07:51.446  WARN 22660 --- [RMI TCP Accept-0] sun.rmi.transport.tcp                    : RMI TCP Accept-0: accept loop for ServerSocket[addr=0.0.0.0/0.0.0.0,localport=64984] throws
+
+java.io.IOException: The server sockets created using the LocalRMIServerSocketFactory only accept connections from clients running on the host where the RMI remote objects have been exported.
+	at sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:114) ~[na:1.8.0_131]
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:400) [na:1.8.0_131]
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:372) [na:1.8.0_131]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+

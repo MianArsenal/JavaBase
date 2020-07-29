@@ -8,7 +8,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Properties;
@@ -18,18 +17,13 @@ import java.util.Properties;
 @MapperScan("com.mian.spring.security.action.helloword.mapper")
 public class HellowordApplication {
 
+    public static void main(String[] args) {
+        SpringApplication.run(HellowordApplication.class, args);
+    }
+
     @GetMapping("/")
     public String hello() {
         return "hello! Spring security!";
-    }
-
-//    @PostMapping("/login")
-//    public String login() {
-//        return "login";
-//    }
-
-    public static void main(String[] args) {
-        SpringApplication.run(HellowordApplication.class, args);
     }
 
     /*

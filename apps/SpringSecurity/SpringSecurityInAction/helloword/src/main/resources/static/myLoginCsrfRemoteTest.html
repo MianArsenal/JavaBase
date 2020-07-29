@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+<div align="center">
+    <form action="/auth/form" method="post">
+        <input type="text" name="username" placeholder="username"/><br/>
+        <input type="password" name="password" placeholder="password"/><br/>
+        <input type="text" name="captcha" placeholder="验证码"/><br/>
+        <img src="/captcha.jpg" alt="captcha"  height="50px" width="150px" style="margin-left: 20px;"/><br/><br/>
+        <input type="submit" value="登录"/>
+    </form>
+    <form action="http://localhost:8081/csrf" method="post">
+        <input type="submit" value="CSRF"/>
+    </form>
+</div>
+</body>
+</html>
