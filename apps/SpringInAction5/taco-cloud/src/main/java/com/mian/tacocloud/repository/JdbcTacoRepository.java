@@ -5,13 +5,12 @@ import com.mian.tacocloud.domain.Taco;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
-import org.springframework.jdbc.core.PreparedStatementCreatorFactory;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
-import java.sql.*;
-import java.util.Arrays;
+import java.sql.PreparedStatement;
+import java.sql.Timestamp;
 import java.util.Date;
 
 @Repository
@@ -28,8 +27,8 @@ public class JdbcTacoRepository implements TacoRepository{
     public Taco save(Taco taco) {
         long tacoId = saveTacoInfo(taco);
         taco.setId(tacoId);
-        for (String ingredient : taco.getIngredients()) {
-            saveIngredientToTaco(ingredient, tacoId);
+        for (Ingredient ingredient : taco.getIngredients()) {
+            saveIngredientToTaco(ingredient.getId(), tacoId);
         }
         return taco;
     }
@@ -50,9 +49,9 @@ public class JdbcTacoRepository implements TacoRepository{
         return keyHolder.getKey().longValue();
     }
 
-    private void saveIngredientToTaco(String ingredient, long tacoId) {
+    private void saveIngredientToTaco(String ingredientId, long tacoId) {
         this.jdbcTemplate.update("insert into Taco_Ingredients (taco, ingredient) values (?, ?)",
                 tacoId,
-                ingredient);
+                ingredientId);
     }
 }
