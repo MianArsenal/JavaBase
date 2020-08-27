@@ -3,6 +3,7 @@ package com.mian.tacocloud.domain;
 import lombok.Data;
 import org.hibernate.validator.constraints.CreditCardNumber;
 
+import javax.persistence.*;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
@@ -11,8 +12,12 @@ import java.util.Date;
 import java.util.List;
 
 @Data
+@Entity
+@Table(name = "Taco_Order")
 public class Order {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotBlank(message = "Name is required")
     private String orderName;
@@ -32,6 +37,17 @@ public class Order {
     @Digits(integer = 3, fraction = 0, message = "Invalid CVV, sample:123")
     private String ccCvv;
     private Date placedAt;
+    @ManyToMany(targetEntity = Taco.class)
+    @JoinTable(name = "Taco_Order_Tacos",
+            joinColumns = {@JoinColumn(name = "tacoOrder")},
+            inverseJoinColumns = {@JoinColumn(name = "taco")},
+            foreignKey = @ForeignKey(name = "tacoOrder"),
+            inverseForeignKey = @ForeignKey(name = "taco"))
     List<Taco> tacos = new ArrayList<>();
+
+    @PrePersist
+    void placedAt() {
+        this.placedAt = new Date();
+    }
 
 }

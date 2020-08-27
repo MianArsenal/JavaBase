@@ -3,8 +3,10 @@ package com.mian.tacocloud.controller;
 import com.mian.tacocloud.domain.Ingredient;
 import com.mian.tacocloud.domain.Order;
 import com.mian.tacocloud.domain.Taco;
-import com.mian.tacocloud.repository.IngredientRepository;
-import com.mian.tacocloud.repository.TacoRepository;
+import com.mian.tacocloud.repository.jdbc.IngredientRepository;
+import com.mian.tacocloud.repository.jdbc.TacoRepository;
+import com.mian.tacocloud.repository.jpa.JpaIngredientRepository;
+import com.mian.tacocloud.repository.jpa.JpaTacoRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,11 +30,18 @@ public class DesignTacoController {
 
     private final IngredientRepository ingredientRepository;
     private final TacoRepository tacoRepository;
+    private final JpaIngredientRepository jpaIngredientRepository;
+    private final JpaTacoRepository jpaTacoRepository;
 
     @Autowired
-    public DesignTacoController(IngredientRepository ingredientRepository, TacoRepository tacoRepository) {
+    public DesignTacoController(IngredientRepository ingredientRepository,
+                                TacoRepository tacoRepository,
+                                JpaIngredientRepository jpaIngredientRepository,
+                                JpaTacoRepository jpaTacoRepository) {
         this.ingredientRepository = ingredientRepository;
         this.tacoRepository = tacoRepository;
+        this.jpaIngredientRepository = jpaIngredientRepository;
+        this.jpaTacoRepository = jpaTacoRepository;
     }
 
     @PostMapping
@@ -42,7 +51,8 @@ public class DesignTacoController {
             attributes.addAttribute("validatedResult", buildValidatedResult(errors));
             return "redirect:/design";
         }
-        Taco savedTaco = this.tacoRepository.save(myTaco);
+//        Taco savedTaco = this.tacoRepository.save(myTaco);
+        Taco savedTaco = this.jpaTacoRepository.save(myTaco);
         order.getTacos().add(savedTaco);
         log.info("Processing design: " + myTaco);
         return "redirect:/orders/current";
@@ -62,7 +72,8 @@ public class DesignTacoController {
             model.addAttribute("validatedResult", validatedResult);
         }
         List<Ingredient> ingredients = new ArrayList<>();
-        this.ingredientRepository.findAll().forEach(ingredients::add);
+//        this.ingredientRepository.findAll().forEach(ingredients::add);
+        this.jpaIngredientRepository.findAll().forEach(ingredients::add);
         Ingredient.Type[] types = Ingredient.Type.values();
         for (Ingredient.Type type : types) {
             model.addAttribute(type.toString().toLowerCase(), filterByType(ingredients, type));

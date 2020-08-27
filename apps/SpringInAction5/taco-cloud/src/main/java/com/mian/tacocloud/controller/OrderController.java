@@ -1,11 +1,11 @@
 package com.mian.tacocloud.controller;
 
 import com.mian.tacocloud.domain.Order;
-import com.mian.tacocloud.repository.OrderRepository;
+import com.mian.tacocloud.repository.jdbc.OrderRepository;
+import com.mian.tacocloud.repository.jpa.JpaOrderRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,10 +22,12 @@ import javax.validation.Valid;
 public class OrderController {
 
     private OrderRepository orderRepository;
+    private JpaOrderRepository jpaOrderRepository;
 
     @Autowired
-    public OrderController(OrderRepository orderRepository) {
+    public OrderController(OrderRepository orderRepository, JpaOrderRepository jpaOrderRepository) {
         this.orderRepository = orderRepository;
+        this.jpaOrderRepository = jpaOrderRepository;
     }
 
     @GetMapping("/current")
@@ -40,6 +42,7 @@ public class OrderController {
             return "orderForm";
         }
         this.orderRepository.save(order);
+//        this.jpaOrderRepository.save(order);
         log.info("order information: " + order);
         sessionStatus.setComplete();
         return "redirect:/";

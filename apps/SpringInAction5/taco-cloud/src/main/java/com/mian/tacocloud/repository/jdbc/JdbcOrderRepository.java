@@ -1,4 +1,4 @@
-package com.mian.tacocloud.repository;
+package com.mian.tacocloud.repository.jdbc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mian.tacocloud.domain.Order;
