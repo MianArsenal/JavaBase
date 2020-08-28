@@ -3,6 +3,8 @@
 -- select * from Taco_Ingredients;
 -- select * from Taco_Order;
 -- select * from Taco_Order_Tacos;
+-- select * from users;
+-- select * from UserAuthorities;
 
 create table if not exists Ingredient (
     id varchar(4) not null,
@@ -49,3 +51,14 @@ alter table Taco_Order_Tacos
 
 alter table Taco_Order_Tacos
     add foreign key (taco) references Taco(id);
+
+create table if not exists Users (
+    username varchar(50),
+    password varchar(60),
+    enabled tinyint(4)
+);
+
+create table if not exists UserAuthorities (
+    username varchar(50),
+    authority varchar(20)
+);
