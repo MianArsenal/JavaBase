@@ -1,0 +1,31 @@
+dn: dc=tacocloud,dc=com
+objectclass: top
+objectclass: domain
+objectclass: extensibleObject
+dc: tacocloud
+
+dn: ou=groups,dc=tacocloud,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: ou=people,dc=tacocloud,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=Henry,ou=people,dc=tacocloud,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Henry Mi
+sn: Lightyear
+uid: Herny
+userPassword: $2a$10$StPey95Ohc48G1i1kHoq4.S0qnPAM6qv2ZAynE47gLvrQC5cNShEm
+
+dn: cn=ADMIN,ou=groups,dc=tacocloud,dc=com
+objectclass: top
+objectclass: groupOfNames
+cn: ADMIN
+member: uid=Henry,ou=people,dc=tacocloud,dc=com

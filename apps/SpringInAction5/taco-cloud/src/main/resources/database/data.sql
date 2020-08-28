@@ -3,6 +3,8 @@ delete from Taco_Ingredients;
 delete from Taco;
 delete from Taco_Order;
 delete from Ingredient;
+delete from Users;
+delete from UserAuthorities;
 
 insert into Ingredient (id, name, type) values ('FLTO', 'Flour Tortilla', 'WRAP');
 insert into Ingredient (id, name, type) values ('COTO', 'Corn Tortilla', 'WRAP');
@@ -15,6 +17,7 @@ insert into Ingredient (id, name, type) values ('JACK', 'Monterrey Jack', 'CHEES
 insert into Ingredient (id, name, type) values ('SLSA', 'Salsa', 'SAUCE');
 insert into Ingredient (id, name, type) values ('SRCR', 'Sour Cream', 'SAUCE');
 
+--password is 123456
 insert into Users (username, password, enabled) values ('Henry', '$2a$10$StPey95Ohc48G1i1kHoq4.S0qnPAM6qv2ZAynE47gLvrQC5cNShEm', 1);
 insert into Users (username, password, enabled) values ('MiAn', '$2a$10$StPey95Ohc48G1i1kHoq4.S0qnPAM6qv2ZAynE47gLvrQC5cNShEm', 1);
 insert into UserAuthorities (username, authority) values ('Henry', 'ROLE_USER');
