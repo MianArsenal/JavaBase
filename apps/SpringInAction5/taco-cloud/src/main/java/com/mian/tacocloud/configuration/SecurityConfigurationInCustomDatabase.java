@@ -1,7 +1,9 @@
 package com.mian.tacocloud.configuration;
 
 import com.mian.tacocloud.handler.AuthorityAccessDeniedHandler;
+import com.mian.tacocloud.service.TacoUserDetailsService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -9,21 +11,26 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.ldap.DefaultSpringSecurityContextSource;
-
-import java.util.Arrays;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Slf4j
-//@Configuration
-//@EnableWebSecurity
-public class SecurityConfigurationInLdap extends WebSecurityConfigurerAdapter {
+@Configuration
+@EnableWebSecurity
+public class SecurityConfigurationInCustomDatabase extends WebSecurityConfigurerAdapter {
+
+    private final TacoUserDetailsService tacoUserDetailsService;
+
+    @Autowired
+    public SecurityConfigurationInCustomDatabase(TacoUserDetailsService tacoUserDetailsService) {
+        this.tacoUserDetailsService = tacoUserDetailsService;
+    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
                 .antMatchers("/design").hasRole("ADMIN")
-                .antMatchers("/h2-console", "/h2-console/**").permitAll()
+                .antMatchers("/h2-console", "/h2-console/**", "/register", "/images/*", "/css/*").permitAll()
                 .anyRequest().authenticated()
                 .and().exceptionHandling().accessDeniedHandler(new AuthorityAccessDeniedHandler(log))
                 .and().csrf().ignoringAntMatchers("/h2-console/**")
@@ -33,21 +40,12 @@ public class SecurityConfigurationInLdap extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.ldapAuthentication()
-                .userSearchBase("ou=people")
-                .userSearchFilter("(uid={0})")
-                .groupSearchBase("ou=groups")
-                .groupSearchFilter("member={0}")
-                .passwordCompare()
-                .passwordEncoder(new BCryptPasswordEncoder())
-                .passwordAttribute("userPassword")
-                .and()
-                .contextSource(contextSource());
-
+        auth.userDetailsService(this.tacoUserDetailsService)
+        .passwordEncoder(encoder());
     }
 
-//    @Bean
-    public DefaultSpringSecurityContextSource contextSource() {
-        return new DefaultSpringSecurityContextSource(Arrays.asList("ldap://localhost:8877/"), "dc=tacocloud,dc=com");
+    @Bean
+    public PasswordEncoder encoder() {
+        return new BCryptPasswordEncoder();
     }
 }

@@ -5,6 +5,7 @@
 -- select * from Taco_Order_Tacos;
 -- select * from users;
 -- select * from UserAuthorities;
+-- select * from Custom_Users;
 
 create table if not exists Ingredient (
     id varchar(4) not null,
@@ -62,3 +63,16 @@ create table if not exists UserAuthorities (
     username varchar(50),
     authority varchar(20)
 );
+
+create table if not exists Custom_Users (
+    id identity,
+    username varchar(50) not null,
+    password varchar(60) not null,
+    fullName varchar(50) not null,
+    street varchar(50) not null,
+    city varchar(50) not null,
+    state varchar(50) not null,
+    zip varchar(10) not null,
+    phoneNumber varchar(20) not null,
+    createDt timestamp
+)
