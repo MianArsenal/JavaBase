@@ -29,7 +29,6 @@ public class SecurityConfigurationInCustomDatabase extends WebSecurityConfigurer
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/design").hasRole("ADMIN")
                 .antMatchers("/h2-console", "/h2-console/**", "/register", "/images/*", "/css/*").permitAll()
                 .anyRequest().authenticated()
                 .and().exceptionHandling().accessDeniedHandler(new AuthorityAccessDeniedHandler(log))
