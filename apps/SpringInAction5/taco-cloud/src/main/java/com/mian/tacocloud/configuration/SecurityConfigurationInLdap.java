@@ -37,7 +37,7 @@ public class SecurityConfigurationInLdap extends WebSecurityConfigurerAdapter {
                 .userSearchBase("ou=people")
                 .userSearchFilter("(uid={0})")
                 .groupSearchBase("ou=groups")
-                .groupSearchFilter("menber={0}")
+                .groupSearchFilter("member={0}")
                 .passwordCompare()
                 .passwordEncoder(new BCryptPasswordEncoder())
                 .passwordAttribute("userPassword")
