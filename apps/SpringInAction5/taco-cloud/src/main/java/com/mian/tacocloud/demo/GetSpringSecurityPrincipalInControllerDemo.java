@@ -1,4 +1,4 @@
-package com.mian.tacocloud.controller;
+package com.mian.tacocloud.demo;
 
 import com.mian.tacocloud.domain.CustomUser;
 import lombok.extern.slf4j.Slf4j;
@@ -13,31 +13,31 @@ import java.security.Principal;
 @Slf4j
 @RestController
 @RequestMapping("/principal")
-public class PrincipalTestController {
+public class GetSpringSecurityPrincipalInControllerDemo {
 
     @RequestMapping("/0")
     public String getPrincipal(Principal principal) {
-        PrincipalTestController.log.info(principal.toString());
+        log.info(principal.toString());
         return principal.getName();
     }
 
     @RequestMapping("/1")
     public String getPrincipal(Authentication authentication) {
         CustomUser customUser = (CustomUser)authentication.getPrincipal();
-        PrincipalTestController.log.info(customUser.getUsername());
+        log.info(customUser.getUsername());
         return customUser.getUsername();
     }
 
     @RequestMapping("/2")
     public String getPrincipal(@AuthenticationPrincipal CustomUser user) {
-        PrincipalTestController.log.info(user.getUsername());
+        log.info(user.getUsername());
         return user.getUsername();
     }
 
     @RequestMapping("/3")
     public String getPrincipal() {
         CustomUser customUser = (CustomUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        PrincipalTestController.log.info(customUser.toString());
+        log.info(customUser.toString());
         return customUser.getUsername();
     }
 }
