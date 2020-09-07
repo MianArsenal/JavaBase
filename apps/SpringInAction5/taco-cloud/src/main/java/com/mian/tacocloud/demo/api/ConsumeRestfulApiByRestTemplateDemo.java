@@ -1,4 +1,4 @@
-package com.mian.tacocloud.demo;
+package com.mian.tacocloud.demo.api;
 
 import com.mian.tacocloud.domain.Ingredient;
 import lombok.extern.slf4j.Slf4j;

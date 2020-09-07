@@ -1,4 +1,4 @@
-package com.mian.tacocloud.demo;
+package com.mian.tacocloud.demo.springsecurity;
 
 import com.mian.tacocloud.domain.CustomUser;
 import lombok.extern.slf4j.Slf4j;

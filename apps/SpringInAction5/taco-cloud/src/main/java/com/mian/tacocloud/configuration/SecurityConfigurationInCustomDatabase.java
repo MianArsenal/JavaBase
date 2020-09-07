@@ -29,7 +29,7 @@ public class SecurityConfigurationInCustomDatabase extends WebSecurityConfigurer
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/h2-console", "/h2-console/**", "/register", "/images/*", "/css/*").permitAll()
+                .antMatchers("/h2-console", "/h2-console/**", "/register", "/images/*", "/css/*", "/activemq/**", "/favicon.ico").permitAll()
                 .anyRequest().authenticated()
                 .and().exceptionHandling().accessDeniedHandler(new AuthorityAccessDeniedHandler(log))
                 .and().csrf().ignoringAntMatchers("/h2-console/**")

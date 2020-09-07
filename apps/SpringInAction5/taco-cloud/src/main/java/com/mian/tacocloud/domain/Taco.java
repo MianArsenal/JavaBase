@@ -7,13 +7,16 @@ import org.springframework.util.StringUtils;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 @Data
 @Entity
-public class Taco {
+public class Taco implements Serializable {
+
+    private static final long serialVersionUID = 4760936229190562159L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,6 +35,10 @@ public class Taco {
     private List<Ingredient> ingredients;
     @Column(name = "createdAt")
     private Date createdAt;
+
+    public Taco() {
+        this.ingredients = new ArrayList<>();
+    }
 
     @PrePersist
     void createdAt() {
