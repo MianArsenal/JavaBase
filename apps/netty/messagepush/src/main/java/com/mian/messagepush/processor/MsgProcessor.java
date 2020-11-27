@@ -78,13 +78,14 @@ public class MsgProcessor {
                 if (!isSelf) {
                     request = new IMMessage(IMP.SYSTEM.getName(), System.currentTimeMillis(), onlineUsers.size(), getNickName(client) + "加入");
                 } else {
-                    request = new IMMessage(IMP.SYSTEM.getName(), System.currentTimeMillis(), onlineUsers.size(), "已与服务器建立连接！");
+                    request =  new IMMessage(IMP.SYSTEM.getName(), System.currentTimeMillis(), onlineUsers.size(), "已与服务器建立连接！");
                 }
 
                 if ("Console".equals(channel.attr(FROM).get())) {
                     channel.writeAndFlush(request);
                     continue;
                 }
+                channel.writeAndFlush(request);
                 String content = encoder.encode(request);
                 channel.writeAndFlush(new TextWebSocketFrame(content));
             }
@@ -102,6 +103,8 @@ public class MsgProcessor {
                     continue;
                 }
                 String content = encoder.encode(request);
+                //需要客户端也收到时，就要直接写IMMessage
+//                channel.writeAndFlush(request);
                 channel.writeAndFlush(new TextWebSocketFrame(content));
             }
         } else if (request.getCmd().equals(IMP.FLOWER.getName())) {

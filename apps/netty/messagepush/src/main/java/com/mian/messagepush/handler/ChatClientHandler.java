@@ -25,16 +25,16 @@ public class ChatClientHandler extends SimpleChannelInboundHandler<IMMessage> {
         new Thread() {
             @Override
             public void run() {
-                System.out.println(nickName + "hello, pls insert your comments: ");
+                System.out.println(nickName + " hello, pls insert your comments: ");
                 IMMessage message = null;
                 Scanner scanner = new Scanner(System.in);
                 do {
                     if (scanner.hasNext()) {
                         String input = scanner.nextLine();
                         if ("exit".equals(input)) {
-                            message = new IMMessage(IMP.LOGOUT.getName(), System.currentTimeMillis(), "Console", nickName);
+                            message = new IMMessage(IMP.LOGOUT.getName(),"Console",System.currentTimeMillis(),nickName);
                         } else {
-                            message = new IMMessage(IMP.CHAT.getName(), System.currentTimeMillis(), nickName, input);
+                            message = new IMMessage(IMP.CHAT.getName(),System.currentTimeMillis(),nickName,input);
                         }
                     }
                 } while (sendMsg(message));
@@ -79,7 +79,7 @@ public class ChatClientHandler extends SimpleChannelInboundHandler<IMMessage> {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         this.ctx = ctx;
-        IMMessage message = new IMMessage(IMP.LOGIN.getName(), System.currentTimeMillis(), "Console", this.nickName);
+        IMMessage message = new IMMessage(IMP.LOGIN.getName(),"Console",System.currentTimeMillis(),this.nickName);
         sendMsg(message);
         log.info("connect to server successfully!");
         session();

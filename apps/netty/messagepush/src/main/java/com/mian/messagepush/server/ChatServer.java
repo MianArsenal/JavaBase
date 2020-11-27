@@ -19,7 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ChatServer {
 
-    private int port = 8082;
+    private int port = 8083;
 
     public void start() {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
