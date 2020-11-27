@@ -4,6 +4,7 @@ import com.mian.messagepush.handler.HttpServerHandler;
 import com.mian.messagepush.handler.TerminalServerHandler;
 import com.mian.messagepush.handler.WebSocketServerHandler;
 import com.mian.messagepush.protocol.IMDecoder;
+import com.mian.messagepush.protocol.IMEncoder;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -18,7 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ChatServer {
 
-    private int port = 8081;
+    private int port = 8082;
 
     public void start() {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
@@ -35,7 +36,7 @@ public class ChatServer {
                             ChannelPipeline pipeline = socketChannel.pipeline();
 
                             pipeline.addLast(new IMDecoder());
-                            pipeline.addLast(new IMDecoder());
+                            pipeline.addLast(new IMEncoder());
                             pipeline.addLast(new TerminalServerHandler());
 
                             pipeline.addLast(new HttpServerCodec());
